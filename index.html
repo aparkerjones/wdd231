@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Parker Jones portfolio home page for WDD 231 with responsive design, course progress, and project links.">
+	<meta name="author" content="Parker Jones">
+	<title>WDD231 | Home</title>
+	<link rel="stylesheet" href="styles/small.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<script src="scripts/navigation.js" defer></script>
+	<script src="scripts/date.js" defer></script>
+	<script src="scripts/courses.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper header-bar">
+			<div class="brand">
+				<img src="images/site-logo.svg" alt="Site logo">
+				<span>Parker Jones</span>
+			</div>
+			<button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">☰</button>
+			<nav aria-label="Primary navigation">
+				<ul id="primaryNav">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="chamber/">Chamber</a></li>
+					<li><a href="final/">Final</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="wrapper">
+		<h1>Home</h1>
+		<div class="home-grid">
+			<section>
+				<h2>About Me</h2>
+				<p>Hi, I’m Parker Jones. I built this site as my WDD 231 home page to track my work and share my progress.</p>
+				<p>This term I’m focused on writing clean code, building responsive layouts, and creating websites that are easy to use on any screen size.</p>
+			</section>
+
+			<section>
+				<h2>Profile Photo</h2>
+				<img class="profile-photo" src="images/profile.jpg" alt="Profile photo of Parker Jones" width="600" height="400">
+			</section>
+
+			<section class="certificate">
+				<h2>Web and Computer Programming Certificate</h2>
+				<div class="filter-buttons" role="group" aria-label="Filter course list">
+					<button type="button" data-filter="ALL" class="active">All Courses</button>
+					<button type="button" data-filter="WDD">WDD Courses</button>
+					<button type="button" data-filter="CSE">CSE Courses</button>
+				</div>
+				<div id="courseList" class="course-list"></div>
+				<p id="creditTotal"></p>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrapper footer-content">
+			<div class="social-links" aria-label="My social links">
+				<a href="https://github.com/parko/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
+					<img src="images/icon-github.svg" alt="GitHub icon" width="24" height="24">
+				</a>
+				<a href="https://www.linkedin.com/in/a-parker-jones/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+					<img src="images/icon-linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+				</a>
+				<a href="https://www.instagram.com/aparkerj/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile">
+					<img src="images/icon-instagram.svg" alt="Instagram icon" width="24" height="24">
+				</a>
+				<a href="https://www.facebook.com/parker.jones.376/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile">
+					<img src="images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
+				</a>
+			</div>
+
+			<p>&copy; <span id="currentyear"></span> Parker Jones | Idaho, United States</p>
+
+			<p id="lastModified"></p>
+		</div>
+	</footer>
+</body>
+</html>

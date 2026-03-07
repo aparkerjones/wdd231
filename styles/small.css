@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --color-bg: #f6f4ee;
+    --color-surface: #ffffff;
+    --color-text: #1f2a23;
+    --color-primary: #1f3b2d;
+    --color-secondary: #2f5d47;
+    --color-accent: #f5d37a;
+    --color-border: #d8d2c3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+.wrapper {
+    width: min(1100px, 100% - 2rem);
+    margin-inline: auto;
+}
+
+header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+}
+
+.brand span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+#menuButton {
+    border: 1px solid var(--color-primary);
+    background: var(--color-surface);
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-top: 1px solid var(--color-border);
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+
+nav a.active {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+main {
+    padding-block: 1rem 2rem;
+}
+
+h1,
+h2 {
+    color: var(--color-primary);
+    margin: 0 0 0.75rem;
+}
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.profile-photo {
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    border: 1px solid var(--color-secondary);
+    background: #fff;
+    color: var(--color-secondary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus-visible {
+    background: #eaf0ec;
+}
+
+.filter-buttons button.active {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.course-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.course-card {
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    background: #fff;
+}
+
+.course-card.completed {
+    border-left-color: var(--color-accent);
+    background: #fff9e8;
+}
+
+.course-code {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.course-credits {
+    margin: 0.4rem 0 0;
+}
+
+#creditTotal {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    padding: 1rem 0;
+    text-align: center;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
