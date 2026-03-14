@@ -1,0 +1,372 @@
+/* Chamber base styles */
+
+/* Color variables */
+:root {
+	--color-bg:        #eef2f7;
+	--color-surface:   #ffffff;
+	--color-text:      #1a2535;
+	--color-muted:     #546070;
+	--color-primary:   #1a3a5c;   /* dark navy  */
+	--color-secondary: #2e6da4;   /* medium blue */
+	--color-accent:    #f0a500;   /* gold        */
+	--color-accent-bg: #fff8e6;
+	--color-border:    #c8d6e5;
+	--color-silver:    #7a8fa6;
+	--color-gold-text: #9a6e00;
+}
+
+/* Base styles */
+body {
+	font-family: "Poppins", Arial, sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-secondary);
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--color-primary);
+}
+
+.wrapper {
+	width: min(1100px, 100% - 2rem);
+	margin-inline: auto;
+}
+
+/* Header */
+header {
+	background: var(--color-primary);
+	color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.header-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.75rem 0;
+}
+
+/* Brand */
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	color: inherit;
+	text-decoration: none;
+}
+
+.brand img {
+	width: 48px;
+	height: 48px;
+	flex-shrink: 0;
+}
+
+.brand-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+}
+
+.brand-name {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.brand-sub {
+	font-size: 0.78rem;
+	opacity: 0.8;
+}
+
+/* Menu button */
+#menuButton {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: transparent;
+	color: #fff;
+	font-size: 1.25rem;
+	width: 44px;
+	height: 44px;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+/* Navigation */
+nav ul {
+	display: none;
+	flex-direction: column;
+	background: var(--color-primary);
+}
+
+nav ul.open {
+	display: flex;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	padding: 0.75rem 1rem;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.85);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover,
+nav a:focus-visible {
+	background: var(--color-secondary);
+	color: #fff;
+}
+
+nav a.active {
+	background: var(--color-accent);
+	color: var(--color-primary);
+}
+
+/* Main */
+main {
+	padding-block: 1.5rem 3rem;
+}
+
+h1,
+h2,
+h3 {
+	color: var(--color-primary);
+}
+
+/* Directory intro */
+.directory-intro {
+	margin-bottom: 1.5rem;
+}
+
+.directory-intro h1 {
+	margin-bottom: 0.25rem;
+}
+
+.directory-intro p {
+	color: var(--color-muted);
+	margin-bottom: 1rem;
+}
+
+/* View toggle */
+.view-toggle {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.view-toggle button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.45rem 1rem;
+	border: 2px solid var(--color-primary);
+	border-radius: 0.4rem;
+	background: var(--color-surface);
+	color: var(--color-primary);
+	font-weight: 600;
+	font-size: 0.875rem;
+}
+
+.view-toggle button:hover,
+.view-toggle button:focus-visible {
+	background: var(--color-bg);
+}
+
+.view-toggle button.active {
+	background: var(--color-primary);
+	color: #fff;
+}
+
+/* Grid view */
+#memberCards.grid-view {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+}
+
+.member-card {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: 0.75rem;
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.member-card img {
+	width: 100%;
+	height: 130px;
+	object-fit: contain;
+	border-radius: 0.5rem;
+	border: 1px solid var(--color-border);
+	background: #f4f7fb;
+	padding: 0.75rem;
+	margin-bottom: 0.4rem;
+}
+
+.member-card h3 {
+	font-size: 1rem;
+	margin: 0;
+}
+
+.member-address,
+.member-phone {
+	font-size: 0.875rem;
+	color: var(--color-muted);
+	margin: 0;
+}
+
+.member-card a {
+	font-size: 0.875rem;
+	word-break: break-all;
+}
+
+.member-desc {
+	font-size: 0.8rem;
+	color: var(--color-muted);
+	margin: 0;
+	line-height: 1.4;
+}
+
+/* Membership badge */
+.membership-badge {
+	display: inline-block;
+	padding: 0.2rem 0.65rem;
+	border-radius: 999px;
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	align-self: flex-start;
+	margin-top: auto;
+	padding-top: 0.75rem;
+}
+
+.level-1 {
+	background: #e8f5e9;
+	color: #2e7d32;
+	border: 1px solid #a5d6a7;
+}
+
+.level-2 {
+	background: #eceff3;
+	color: var(--color-silver);
+	border: 1px solid var(--color-silver);
+}
+
+.level-3 {
+	background: var(--color-accent-bg);
+	color: var(--color-gold-text);
+	border: 1px solid #deb94a;
+}
+
+/* List view */
+#memberCards.list-view {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+#memberCards.list-view .member-card {
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.25rem;
+	padding: 0.875rem 1rem;
+	border-radius: 0.5rem;
+}
+
+#memberCards.list-view .member-card img {
+	display: none;
+}
+
+#memberCards.list-view .member-card h3 {
+	flex: 1 1 160px;
+	font-size: 0.95rem;
+}
+
+#memberCards.list-view .member-address,
+#memberCards.list-view .member-phone {
+	flex: 1 1 140px;
+}
+
+#memberCards.list-view .member-card a {
+	flex: 1 1 140px;
+}
+
+#memberCards.list-view .membership-badge {
+	align-self: center;
+	margin-top: 0;
+	padding-top: 0.2rem;
+}
+
+/* Load error */
+.load-error {
+	color: #b00020;
+	font-weight: 600;
+	padding: 1rem;
+}
+
+/* Footer */
+footer {
+	background: var(--color-primary);
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-content {
+	padding: 1.75rem 0;
+	display: grid;
+	gap: 1.25rem;
+	text-align: center;
+}
+
+.footer-chamber {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.footer-chamber img {
+	filter: brightness(0) invert(1);
+	opacity: 0.9;
+}
+
+.footer-chamber-name {
+	font-weight: 700;
+	color: #fff;
+	margin: 0;
+}
+
+footer address p {
+	margin: 0.15rem 0;
+	font-size: 0.875rem;
+}
+
+footer a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+	color: var(--color-accent);
+}
+
+.footer-meta {
+	font-size: 0.875rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.footer-meta p {
+	margin: 0;
+}

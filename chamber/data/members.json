@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Meridian Medical Group",
+		"address": "1234 N Eagle Rd, Meridian, ID 83646",
+		"phone": "(208) 555-0101",
+		"website": "https://meridianmedicalgroup.com",
+		"image": "images/meridian-medical.webp",
+		"membershipLevel": 3,
+		"description": "Comprehensive primary and specialty care serving the Treasure Valley."
+	},
+	{
+		"name": "Treasure Valley Builders",
+		"address": "5678 W McMillan Rd, Meridian, ID 83646",
+		"phone": "(208) 555-0202",
+		"website": "https://tvbuilders.com",
+		"image": "images/tv-builders.webp",
+		"membershipLevel": 3,
+		"description": "Custom and semi-custom home construction throughout the Treasure Valley."
+	},
+	{
+		"name": "Sunrise Solar Solutions",
+		"address": "2468 W Franklin Rd, Meridian, ID 83642",
+		"phone": "(208) 555-0303",
+		"website": "https://sunrisesolarid.com",
+		"image": "images/sunrise-solar.webp",
+		"membershipLevel": 3,
+		"description": "Idaho's trusted solar installation and energy efficiency specialists."
+	},
+	{
+		"name": "Starview Realty",
+		"address": "910 E Fairview Ave, Meridian, ID 83642",
+		"phone": "(208) 555-0404",
+		"website": "https://starviewrealty.com",
+		"image": "images/starview-realty.webp",
+		"membershipLevel": 2,
+		"description": "Helping families find their perfect Treasure Valley home since 2005."
+	},
+	{
+		"name": "Meridian Family Dental",
+		"address": "456 N Locust Grove Rd, Meridian, ID 83642",
+		"phone": "(208) 555-0505",
+		"website": "https://meridianfamilydental.com",
+		"image": "images/meridian-dental.webp",
+		"membershipLevel": 2,
+		"description": "Comprehensive dental care for patients of all ages in a welcoming environment."
+	},
+	{
+		"name": "Blue Sage Coffee Co.",
+		"address": "321 Main St, Meridian, ID 83642",
+		"phone": "(208) 555-0606",
+		"website": "https://bluesagecoffee.com",
+		"image": "images/blue-sage-coffee.webp",
+		"membershipLevel": 1,
+		"description": "Locally roasted coffee and a cozy café atmosphere in downtown Meridian."
+	},
+	{
+		"name": "Idaho Farm & Ranch Supply",
+		"address": "7890 S Meridian Rd, Meridian, ID 83642",
+		"phone": "(208) 555-0707",
+		"website": "https://idahofarmranch.com",
+		"image": "images/idaho-farm-supply.webp",
+		"membershipLevel": 1,
+		"description": "Your one-stop shop for agricultural supplies, livestock feed, and tools."
+	}
+]

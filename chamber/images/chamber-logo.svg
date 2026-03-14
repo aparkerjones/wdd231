@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="8" fill="#1a3a5c"/>
+  <!-- building base -->
+  <rect x="8" y="20" width="32" height="20" rx="1" fill="none" stroke="#f0a500" stroke-width="2.5"/>
+  <!-- roof gable -->
+  <polyline points="5,22 24,9 43,22" fill="none" stroke="#f0a500" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- door -->
+  <rect x="20" y="30" width="8" height="10" rx="1" fill="#f0a500"/>
+  <!-- windows -->
+  <rect x="10" y="24" width="7" height="5" rx="0.5" fill="#f0a500" opacity="0.85"/>
+  <rect x="31" y="24" width="7" height="5" rx="0.5" fill="#f0a500" opacity="0.85"/>
+</svg>

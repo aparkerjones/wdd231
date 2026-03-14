@@ -1,0 +1,57 @@
+/* Chamber wider-screen styles */
+
+@media (min-width: 48rem) {
+
+	/* Desktop navigation */
+	#menuButton {
+		display: none;
+	}
+
+	nav ul,
+	nav ul.open {
+		display: flex;
+		flex-direction: row;
+		gap: 0.35rem;
+		align-items: center;
+	}
+
+	nav a {
+		border-top: none;
+		border-radius: 0.4rem;
+		padding: 0.5rem 0.9rem;
+	}
+
+	.header-bar {
+		padding: 1rem 0;
+	}
+
+	/* Two-column grid */
+	#memberCards.grid-view {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* Footer layout */
+	.footer-content {
+		grid-template-columns: 1fr 1fr;
+		text-align: left;
+		align-items: start;
+	}
+
+	.footer-chamber {
+		align-items: flex-start;
+	}
+
+	.footer-meta {
+		text-align: right;
+		justify-self: end;
+		align-self: center;
+	}
+}
+
+@media (min-width: 64rem) {
+
+	/* Three-column grid */
+	#memberCards.grid-view {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
