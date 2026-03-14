@@ -106,7 +106,7 @@ nav a:focus-visible {
 
 nav a.active {
     background: var(--color-primary);
-    color: #fff;
+    color: #ffffff;
 }
 
 main {
@@ -145,7 +145,7 @@ section {
 
 .filter-buttons button {
     border: 1px solid var(--color-secondary);
-    background: #fff;
+    background: #ffffff;
     color: var(--color-secondary);
     padding: 0.5rem 0.75rem;
     border-radius: 0.4rem;
@@ -160,7 +160,7 @@ section {
 
 .filter-buttons button.active {
     background: var(--color-secondary);
-    color: #fff;
+    color: #ffffff;
 }
 
 .course-list {
@@ -173,7 +173,7 @@ section {
     border-left: 5px solid var(--color-secondary);
     border-radius: 0.5rem;
     padding: 0.75rem;
-    background: #fff;
+    background: #ffffff;
 }
 
 .course-card.completed {
@@ -221,7 +221,7 @@ footer {
     height: 42px;
     border: 1px solid var(--color-border);
     border-radius: 50%;
-    background: #fff;
+    background: #ffffff;
 }
 
 .social-links img {

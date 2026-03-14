@@ -1,1 +1,72 @@
-To be added later.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Meridian Chamber of Commerce home page for local business support, resources, and community engagement.">
+	<meta name="author" content="Parker Jones">
+	<title>Home | Meridian Chamber of Commerce</title>
+	<link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/small.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<script src="scripts/navigation.js" defer></script>
+	<script src="scripts/date.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper header-bar">
+			<div class="brand">
+				<img src="images/chamber-logo.svg" alt="Meridian Chamber of Commerce logo" width="48" height="48">
+				<div class="brand-text">
+					<span class="brand-name">Meridian Chamber</span>
+					<span class="brand-sub">of Commerce</span>
+				</div>
+			</div>
+			<button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">&#9776;</button>
+			<nav aria-label="Primary navigation">
+				<ul id="primaryNav">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="discover.html">Discover</a></li>
+					<li><a href="join.html">Join</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="wrapper">
+		<section class="directory-intro">
+			<h1>Meridian Chamber Home</h1>
+			<p>Connect with Meridian businesses, chamber services, and local economic opportunities.</p>
+		</section>
+
+		<section class="content-panel">
+			<p>The Meridian Chamber supports business growth through networking, advocacy, and community partnerships.</p>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrapper footer-content">
+			<div class="footer-chamber">
+				<img src="images/chamber-logo.svg" alt="Meridian Chamber of Commerce" width="40" height="40">
+				<p class="footer-chamber-name">Meridian Chamber of Commerce</p>
+				<address>
+					<p>215 E Franklin Rd, Meridian, ID 83642</p>
+					<p><a href="tel:+12088882817">(208) 888-2817</a></p>
+					<p><a href="mailto:info@meridianchamber.org">info@meridianchamber.org</a></p>
+				</address>
+			</div>
+
+			<div class="footer-meta">
+				<p>&copy; <span id="currentyear"></span> Meridian Chamber of Commerce</p>
+				<p>Parker Jones &mdash; WDD 231</p>
+				<p id="lastModified"></p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

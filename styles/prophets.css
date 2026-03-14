@@ -8,9 +8,9 @@
 	--accent: #d97a2b;
 	--text: #24333a;
 	--muted: #4c6167;
-	--panel-shadow: rgba(16, 44, 52, 0.18);
-	--card-shadow: rgba(23, 54, 61, 0.14);
-	--image-shadow: rgba(24, 38, 43, 0.25);
+	--panel-shadow: #102c342e;
+	--card-shadow: #17363d24;
+	--image-shadow: #18262b40;
 }
 
 * {
@@ -22,8 +22,8 @@ body {
 	font-family: "Manrope", sans-serif;
 	color: var(--text);
 	background:
-		radial-gradient(circle at 15% 0%, #fff8e7 0%, transparent 42%),
-		radial-gradient(circle at 90% 20%, #d7efea 0%, transparent 38%),
+		radial-gradient(circle at 15% 0%, #fff8e7 0%, #fff8e700 42%),
+		radial-gradient(circle at 90% 20%, #d7efea 0%, #d7efea00 38%),
 		linear-gradient(155deg, var(--bg-warm) 0%, var(--bg-cool) 100%);
 }
 
@@ -44,7 +44,7 @@ main {
 	width: min(1200px, 94vw);
 	margin: 0 auto 2rem;
 	padding: 1.2rem;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: #ffffffe6;
 	border: 1px solid #d8e5e1;
 	border-radius: 14px;
 	box-shadow: 0 14px 30px var(--panel-shadow);

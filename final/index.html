@@ -1,1 +1,70 @@
-To be added later.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Final project page for WDD 231 with shared navigation and footer layout.">
+	<meta name="author" content="Parker Jones">
+	<meta property="og:title" content="WDD231 | Final">
+	<meta property="og:description" content="Parker Jones WDD 231 final project page.">
+	<meta property="og:image" content="https://aparkerjones.github.io/wdd231/images/profile.jpg">
+	<meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/">
+	<title>WDD231 | Final</title>
+	<link rel="icon" href="../images/lightning.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/small.css">
+	<link rel="stylesheet" href="../styles/larger.css">
+	<script src="../scripts/navigation.js" defer></script>
+	<script src="../scripts/date.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper header-bar">
+			<div class="brand">
+				<img src="../images/site-logo.svg" alt="Site logo" width="48" height="48">
+				<span>Parker Jones</span>
+			</div>
+			<button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">☰</button>
+			<nav aria-label="Primary navigation">
+				<ul id="primaryNav">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../chamber/">Chamber</a></li>
+					<li><a href="index.html" class="active">Final</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="wrapper">
+		<h1>Final</h1>
+		<section>
+			<p>This section contains final project content and supporting materials for WDD 231.</p>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrapper footer-content">
+			<nav class="social-links" aria-label="My social links">
+				<a href="https://github.com/parko/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
+					<img src="../images/icon-github.svg" alt="GitHub icon" width="24" height="24">
+				</a>
+				<a href="https://www.linkedin.com/in/a-parker-jones/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+					<img src="../images/icon-linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+				</a>
+				<a href="https://www.instagram.com/aparkerj/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile">
+					<img src="../images/icon-instagram.svg" alt="Instagram icon" width="24" height="24">
+				</a>
+				<a href="https://www.facebook.com/parker.jones.376/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile">
+					<img src="../images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
+				</a>
+			</nav>
+
+			<p>&copy; <span id="currentyear"></span> Parker Jones | Idaho, United States</p>
+
+			<p id="lastModified"></p>
+		</div>
+	</footer>
+</body>
+</html>

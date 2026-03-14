@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Meridian Medical Group logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d5f91" />
+      <stop offset="100%" stop-color="#2a8cc7" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#bg)" />
+  <circle cx="300" cy="165" r="95" fill="#ffffff1f" stroke="#ffffff66" stroke-width="4" />
+  <rect x="280" y="112" width="40" height="106" rx="8" fill="#ffffff" />
+  <rect x="247" y="145" width="106" height="40" rx="8" fill="#ffffff" />
+  <text x="300" y="302" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Meridian Medical Group</text>
+  <text x="300" y="340" fill="#d9f2ff" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="6" text-anchor="middle">MMG</text>
+</svg>

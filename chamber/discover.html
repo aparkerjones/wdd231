@@ -3,32 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Browse the business member directory for the Meridian, Idaho Chamber of Commerce — find local services, shops, and professionals.">
+	<meta name="description" content="Discover Meridian highlights, community insights, and local opportunities through the chamber.">
 	<meta name="author" content="Parker Jones">
-
-	<meta property="og:title" content="Member Directory | Meridian Chamber of Commerce">
-	<meta property="og:description" content="Browse the business member directory for the Meridian, Idaho Chamber of Commerce — find local services, shops, and professionals.">
-	<meta property="og:image" content="https://aparkerjones.github.io/wdd231/chamber/images/chamber-og.jpg">
-	<meta property="og:url" content="https://aparkerjones.github.io/wdd231/chamber/directory.html">
-
-	<title>Member Directory | Meridian Chamber of Commerce</title>
-
+	<title>Discover | Meridian Chamber of Commerce</title>
 	<link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/small.css">
 	<link rel="stylesheet" href="styles/larger.css">
-
 	<script src="scripts/navigation.js" defer></script>
 	<script src="scripts/date.js" defer></script>
-	<script src="scripts/members.js" defer></script>
 </head>
 <body>
-
 	<header>
 		<div class="wrapper header-bar">
 			<div class="brand">
@@ -42,8 +30,8 @@
 			<nav aria-label="Primary navigation">
 				<ul id="primaryNav">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="directory.html" class="active">Directory</a></li>
-					<li><a href="discover.html">Discover</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="discover.html" class="active">Discover</a></li>
 					<li><a href="join.html">Join</a></li>
 				</ul>
 			</nav>
@@ -51,40 +39,18 @@
 	</header>
 
 	<main class="wrapper">
-
 		<section class="directory-intro">
-			<h1>Business Directory</h1>
-			<p>Connecting you with the businesses that make Meridian, Idaho thrive.</p>
-			<div class="view-toggle" role="group" aria-label="Select directory view">
-				<button id="gridView" class="active" aria-pressed="true" title="Grid view">
-					<svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-						<rect x="3" y="3" width="7" height="7" rx="1"/>
-						<rect x="14" y="3" width="7" height="7" rx="1"/>
-						<rect x="3" y="14" width="7" height="7" rx="1"/>
-						<rect x="14" y="14" width="7" height="7" rx="1"/>
-					</svg>
-					Grid
-				</button>
-				<button id="listView" aria-pressed="false" title="List view">
-					<svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-						<rect x="3" y="5" width="18" height="2" rx="1"/>
-						<rect x="3" y="11" width="18" height="2" rx="1"/>
-						<rect x="3" y="17" width="18" height="2" rx="1"/>
-					</svg>
-					List
-				</button>
-			</div>
+			<h1>Discover Meridian</h1>
+			<p>Explore local highlights, community insights, and what makes Meridian a strong place to live and work.</p>
 		</section>
 
-		<section id="memberCards" class="grid-view" aria-live="polite" aria-label="Business member cards">
-			<!-- Member cards from members.js -->
+		<section class="content-panel">
+			<p>This page introduces area context, notable places, and community information for chamber visitors.</p>
 		</section>
-
 	</main>
 
 	<footer>
 		<div class="wrapper footer-content">
-
 			<div class="footer-chamber">
 				<img src="images/chamber-logo.svg" alt="Meridian Chamber of Commerce" width="40" height="40">
 				<p class="footer-chamber-name">Meridian Chamber of Commerce</p>
@@ -100,9 +66,7 @@
 				<p>Parker Jones &mdash; WDD 231</p>
 				<p id="lastModified"></p>
 			</div>
-
 		</div>
 	</footer>
-
 </body>
 </html>

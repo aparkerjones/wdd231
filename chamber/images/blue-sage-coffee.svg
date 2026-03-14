@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Blue Sage Coffee Co. logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6efe2" />
+      <stop offset="100%" stop-color="#e5dccb" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#bg)" />
+  <rect x="220" y="165" width="150" height="96" rx="16" fill="#2f4f67" />
+  <path d="M370 186 H392 C412 186 426 200 426 220 C426 240 412 254 392 254 H370" fill="none" stroke="#2f4f67" stroke-width="12" stroke-linecap="round" />
+  <line x1="210" y1="270" x2="430" y2="270" stroke="#83624a" stroke-width="12" stroke-linecap="round" />
+  <path d="M255 154 C245 142 246 126 258 116" fill="none" stroke="#2f4f67" stroke-width="8" stroke-linecap="round" />
+  <path d="M298 154 C288 142 289 126 301 116" fill="none" stroke="#2f4f67" stroke-width="8" stroke-linecap="round" />
+  <path d="M341 154 C331 142 332 126 344 116" fill="none" stroke="#2f4f67" stroke-width="8" stroke-linecap="round" />
+  <path d="M168 190 C185 165 218 168 228 196 C211 204 185 202 168 190 Z" fill="#6f9f87" />
+  <text x="300" y="326" fill="#3d2a1d" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle">Blue Sage Coffee Co.</text>
+  <text x="300" y="356" fill="#5b4130" font-family="Poppins, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="4" text-anchor="middle">BSC</text>
+</svg>

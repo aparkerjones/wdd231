@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Meridian Family Dental logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5f9f3" />
+      <stop offset="100%" stop-color="#c7efe3" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#bg)" />
+  <path d="M300 88 C250 88 220 122 220 172 C220 218 248 250 252 286 C255 318 274 336 300 336 C326 336 345 318 348 286 C352 250 380 218 380 172 C380 122 350 88 300 88 Z" fill="#ffffff" stroke="#58a58f" stroke-width="7" />
+  <polygon points="390,98 400,122 424,132 400,142 390,166 380,142 356,132 380,122" fill="#58a58f" />
+  <circle cx="270" cy="190" r="10" fill="#9ad9c8" />
+  <circle cx="330" cy="190" r="10" fill="#9ad9c8" />
+  <text x="300" y="330" fill="#2f7a66" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle">Meridian Family Dental</text>
+  <text x="300" y="360" fill="#3b937b" font-family="Poppins, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="4" text-anchor="middle">MFD</text>
+</svg>

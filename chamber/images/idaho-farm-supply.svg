@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" aria-label="Idaho Farm and Ranch Supply logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dff2d3" />
+      <stop offset="100%" stop-color="#b9dda3" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="url(#bg)" />
+  <path d="M0 250 C120 220 240 280 360 248 C450 224 530 246 600 232 V400 H0 Z" fill="#87b76a" />
+  <polygon points="230,220 300,150 370,220" fill="#b94534" />
+  <rect x="245" y="220" width="110" height="86" fill="#c95342" stroke="#943223" stroke-width="6" />
+  <rect x="289" y="248" width="22" height="58" fill="#f2d48e" />
+  <line x1="150" y1="302" x2="150" y2="210" stroke="#7a5b2f" stroke-width="5" />
+  <line x1="450" y1="302" x2="450" y2="210" stroke="#7a5b2f" stroke-width="5" />
+  <g stroke="#d9b64c" stroke-width="4" stroke-linecap="round">
+    <line x1="150" y1="228" x2="136" y2="216" />
+    <line x1="150" y1="244" x2="136" y2="232" />
+    <line x1="150" y1="260" x2="136" y2="248" />
+    <line x1="150" y1="276" x2="136" y2="264" />
+    <line x1="450" y1="228" x2="464" y2="216" />
+    <line x1="450" y1="244" x2="464" y2="232" />
+    <line x1="450" y1="260" x2="464" y2="248" />
+    <line x1="450" y1="276" x2="464" y2="264" />
+  </g>
+  <text x="300" y="334" fill="#355924" font-family="Poppins, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle">Idaho Farm and Ranch Supply</text>
+  <text x="300" y="362" fill="#4b7734" font-family="Poppins, Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="4" text-anchor="middle">IFRS</text>
+</svg>
