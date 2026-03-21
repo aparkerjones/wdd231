@@ -183,7 +183,7 @@ async function fetchSpotlights() {
       spotlightHTML += `
         <article class="spotlight-card" aria-label="${member.name} spotlight">
           <div class="spotlight-image-container">
-            <img src="${member.image}" alt="${member.name} logo" class="spotlight-image">
+            <img src="${member.image}" alt="${member.name} logo" class="spotlight-image" loading="lazy">
           </div>
           <h3>${member.name}</h3>
           <p class="membership-badge">${level}</p>
