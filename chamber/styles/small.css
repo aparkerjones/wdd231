@@ -9,10 +9,12 @@
 	--color-primary:   #1a3a5c;   /* dark navy  */
 	--color-secondary: #2e6da4;   /* medium blue */
 	--color-accent:    #f0a500;   /* gold        */
+	--color-accent-dark: #e6920d; /* darker gold for hover */
 	--color-accent-bg: #fff8e6;
 	--color-border:    #c8d6e5;
 	--color-silver:    #44576c;
 	--color-gold-text: #7a5600;
+	--color-error:     #b00020;   /* error/danger red */
 	--color-white:     #ffffff;
 	--color-white-85:  #ffffffd9;
 	--color-white-80:  #ffffffcc;
@@ -20,6 +22,10 @@
 	--color-white-35:  #ffffff59;
 	--color-white-10:  #ffffff1a;
 	--color-black-25:  #00000040;
+	--color-success-bg: #e8f5e9;   /* green background */
+	--color-success-text: #2b6b2f; /* green text */
+	--color-success-border: #a5d6a7; /* green border */	--color-silver-bg: #eceff3;    /* silver background */
+	--color-gold-border: #deb94a;  /* gold border */	--color-card-img-bg: #f4f7fb;  /* light card image bg */
 }
 
 /* Base styles */
@@ -98,7 +104,7 @@ header {
 /* Menu button */
 #menuButton {
 	border: 1px solid var(--color-white-40);
-	background: #00000000;
+	background: transparent;
 	color: var(--color-white);
 	font-size: 1.25rem;
 	width: 44px;
@@ -153,6 +159,13 @@ h3 {
 /* Directory intro */
 .directory-intro {
 	margin-bottom: 1.5rem;
+}
+
+.directory-intro h1,
+.events h2,
+.weather h2,
+.spotlights h2 {
+	margin-bottom: 1.25rem;
 }
 
 .directory-intro h1 {
@@ -236,7 +249,7 @@ h3 {
 	object-fit: contain;
 	border-radius: 0.5rem;
 	border: 1px solid var(--color-border);
-	background: #f4f7fb;
+	background: var(--color-card-img-bg);
 	padding: 0.75rem;
 	margin-bottom: 0.4rem;
 }
@@ -280,13 +293,13 @@ h3 {
 }
 
 .level-1 {
-	background: #e8f5e9;
-	color: #2b6b2f;
-	border: 1px solid #a5d6a7;
+	background: var(--color-success-bg);
+	color: var(--color-success-text);
+	border: 1px solid var(--color-success-border);
 }
 
 .level-2 {
-	background: #eceff3;
+	background: var(--color-silver-bg);
 	color: var(--color-silver);
 	border: 1px solid var(--color-silver);
 }
@@ -294,7 +307,7 @@ h3 {
 .level-3 {
 	background: var(--color-accent-bg);
 	color: var(--color-gold-text);
-	border: 1px solid #deb94a;
+	border: 1px solid var(--color-gold-border);
 }
 
 /* List view */
@@ -337,14 +350,23 @@ h3 {
 	padding-top: 0.2rem;
 }
 
-/* Load error */
-.load-error {
-	color: #b00020;
-	font-weight: 600;
+/* Load error & Loading messages */
+.load-error,
+.loading,
+.error {
+	text-align: center;
 	padding: 1rem;
 }
 
-/* Hero */
+.load-error,
+.error {
+	color: var(--color-error);
+	font-weight: 600;
+}
+
+.loading {
+	color: var(--color-muted);
+}
 .hero {
 	position: relative;
 	margin: -1.5rem -2rem 2rem;
@@ -404,17 +426,13 @@ h3 {
 
 .cta-button:hover,
 .cta-button:focus-visible {
-	background: #e6920d;
+	background: var(--color-accent-dark);
 	transform: scale(1.05);
 }
 
 /* Events */
 .events {
 	margin-bottom: 2rem;
-}
-
-.events h2 {
-	margin-bottom: 1.25rem;
 }
 
 .events-list {
@@ -451,10 +469,6 @@ h3 {
 /* Weather */
 .weather {
 	margin-bottom: 2rem;
-}
-
-.weather h2 {
-	margin-bottom: 1.25rem;
 }
 
 .weather-content {
@@ -545,25 +559,9 @@ h3 {
 	font-weight: normal;
 }
 
-.loading,
-.error {
-	text-align: center;
-	color: var(--color-muted);
-	padding: 1rem;
-}
-
-.error {
-	color: #b00020;
-	font-weight: 600;
-}
-
 /* Spotlights */
 .spotlights {
 	margin-bottom: 2rem;
-}
-
-.spotlights h2 {
-	margin-bottom: 1.25rem;
 }
 
 .spotlight-grid {
@@ -658,66 +656,6 @@ footer {
 }
 
 .footer-chamber img {
-	border: 1px solid var(--color-white-35);
-	border-radius: 0.5rem;
-	box-shadow: 0 2px 8px var(--color-black-25);
-}
-
-.footer-chamber-name {
-	font-weight: 700;
-	color: var(--color-white);
-	margin: 0;
-}
-
-footer address p {
-	margin: 0.15rem 0;
-	font-size: 0.875rem;
-}
-
-footer a {
-	color: var(--color-white-80);
-	text-decoration: none;
-}
-
-footer a:hover,
-footer a:focus-visible {
-	color: var(--color-accent);
-}
-
-.footer-meta {
-	font-size: 0.875rem;
-	display: flex;
-	flex-direction: column;
-	gap: 0.2rem;
-}
-
-.footer-meta p {
-	margin: 0;
-}
-
-/* Footer */
-footer {
-	background: var(--color-primary);
-	color: var(--color-white-85);
-}
-
-.footer-content {
-	padding: 1.75rem 0;
-	display: grid;
-	gap: 1.25rem;
-	text-align: center;
-}
-
-.footer-chamber {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.4rem;
-}
-
-.footer-chamber img {
-	filter: none;
-	opacity: 1;
 	border: 1px solid var(--color-white-35);
 	border-radius: 0.5rem;
 	box-shadow: 0 2px 8px var(--color-black-25);
