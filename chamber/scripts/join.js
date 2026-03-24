@@ -32,6 +32,7 @@ function initializeModals() {
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'block';
+                modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
             }
         });
@@ -42,6 +43,7 @@ function initializeModals() {
         button.addEventListener('click', function() {
             const modal = this.closest('.modal');
             modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = 'auto';
         });
     });
@@ -51,6 +53,7 @@ function initializeModals() {
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             }
         });
@@ -61,6 +64,7 @@ function initializeModals() {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
             });
             document.body.style.overflow = 'auto';
         }
