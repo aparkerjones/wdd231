@@ -852,6 +852,7 @@ footer a:focus-visible {
 	max-height: 80vh;
 	overflow-y: auto;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	border: 2px solid #ffffff;
 }
 
 .close {
@@ -860,9 +861,10 @@ footer a:focus-visible {
 	right: 1.5rem;
 	font-size: 2rem;
 	font-weight: bold;
-	color: var(--color-muted);
+	color: #1a2535;
 	cursor: pointer;
 	transition: color 0.3s ease;
+	z-index: 1002;
 }
 
 .close:hover,
