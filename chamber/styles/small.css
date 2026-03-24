@@ -841,7 +841,7 @@ footer a:focus-visible {
 }
 
 .modal-content {
-	background-color: var(--color-surface);
+	background-color: #ffffff;
 	margin: 10% auto;
 	padding: 2rem;
 	border-radius: 0.75rem;
@@ -850,6 +850,7 @@ footer a:focus-visible {
 	position: relative;
 	max-height: 80vh;
 	overflow-y: auto;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .close {
@@ -877,6 +878,7 @@ footer a:focus-visible {
 .modal p {
 	margin: 0.5rem 0;
 	line-height: 1.5;
+	color: #1a2535;
 }
 
 .modal h3 {
