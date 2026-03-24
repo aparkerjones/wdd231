@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="styles/larger.css">
 	<script src="scripts/navigation.js" defer></script>
 	<script src="scripts/date.js" defer></script>
+	<script src="scripts/join.js" defer></script>
 </head>
 <body>
 	<header>
@@ -44,9 +45,151 @@
 			<p>Learn how to become a member and connect your organization with Meridian's business community.</p>
 		</section>
 
-		<section class="content-panel">
-			<p>Membership tiers include Non-Profit, Silver, and Gold options, each with different participation benefits.</p>
+		<section class="join-content">
+			<div class="form-container">
+				<form method="get" action="thankyou.html" class="membership-form">
+					<fieldset>
+						<legend>Applicant Information</legend>
+						<label for="fname">First Name *</label>
+						<input type="text" id="fname" name="fname" required autocomplete="given-name" title="First Name">
+
+						<label for="lname">Last Name *</label>
+						<input type="text" id="lname" name="lname" required autocomplete="family-name" title="Last Name">
+
+						<label for="title">Organizational Title</label>
+						<input type="text" id="title" name="title" autocomplete="organization-title" pattern="[a-zA-Z\s\-]{7,}" title="Title (minimum 7 characters, letters, spaces, and hyphens only)">
+
+						<label for="email">Email *</label>
+						<input type="email" id="email" name="email" required autocomplete="email" placeholder="yourname@example.com" title="Email Address">
+
+						<label for="phone">Mobile Phone *</label>
+						<input type="tel" id="phone" name="phone" required autocomplete="tel" title="Mobile Phone Number">
+					</fieldset>
+
+					<fieldset>
+						<legend>Organization Information</legend>
+						<label for="organization">Business/Organization Name *</label>
+						<input type="text" id="organization" name="organization" required autocomplete="organization" title="Business or Organization Name">
+
+						<label for="description">Business Description</label>
+						<textarea id="description" name="description" rows="4" title="Business Description"></textarea>
+
+						<label for="membership">Membership Level *</label>
+						<select id="membership" name="membership" required title="Select Membership Level">
+							<option value="">Select a membership level</option>
+							<option value="np">NP Membership (Non-Profit) - No Fee</option>
+							<option value="bronze">Bronze Membership</option>
+							<option value="silver">Silver Membership</option>
+							<option value="gold">Gold Membership</option>
+						</select>
+					</fieldset>
+
+					<input type="hidden" id="timestamp" name="timestamp">
+
+					<button type="submit" class="submit-button">Join the Chamber</button>
+				</form>
+			</div>
+
+			<div class="membership-levels">
+				<h2>Membership Levels</h2>
+				<div class="levels-grid">
+					<div class="level-card" data-level="np">
+						<h3>NP Membership</h3>
+						<p>For non-profit organizations</p>
+						<a href="#" class="level-link" data-modal="modal-np">Learn More</a>
+					</div>
+					<div class="level-card" data-level="bronze">
+						<h3>Bronze Membership</h3>
+						<p>Basic membership benefits</p>
+						<a href="#" class="level-link" data-modal="modal-bronze">Learn More</a>
+					</div>
+					<div class="level-card" data-level="silver">
+						<h3>Silver Membership</h3>
+						<p>Enhanced networking opportunities</p>
+						<a href="#" class="level-link" data-modal="modal-silver">Learn More</a>
+					</div>
+					<div class="level-card" data-level="gold">
+						<h3>Gold Membership</h3>
+						<p>Premium benefits and spotlight features</p>
+						<a href="#" class="level-link" data-modal="modal-gold">Learn More</a>
+					</div>
+				</div>
+			</div>
 		</section>
+
+		<!-- Modals -->
+		<div id="modal-np" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>NP Membership - Non-Profit</h2>
+				<p><strong>Cost:</strong> No Fee</p>
+				<p>Perfect for non-profit organizations committed to community service. This membership provides access to networking events, community resources, and chamber advocacy efforts.</p>
+				<h3>Benefits Include:</h3>
+				<ul>
+					<li>Access to monthly networking events</li>
+					<li>Community resource directory</li>
+					<li>Chamber advocacy and support</li>
+					<li>Volunteer opportunities</li>
+					<li>Basic member directory listing</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="modal-bronze" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Bronze Membership</h2>
+				<p><strong>Cost:</strong> $150/year</p>
+				<p>Essential membership for small businesses and startups looking to establish their presence in the community.</p>
+				<h3>Benefits Include:</h3>
+				<ul>
+					<li>All NP membership benefits</li>
+					<li>Business directory listing with logo</li>
+					<li>Monthly newsletter</li>
+					<li>Access to business workshops</li>
+					<li>Ribbon cutting ceremony</li>
+					<li>Basic website promotion</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="modal-silver" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Silver Membership</h2>
+				<p><strong>Cost:</strong> $300/year</p>
+				<p>Enhanced membership for growing businesses seeking greater visibility and networking opportunities.</p>
+				<h3>Benefits Include:</h3>
+				<ul>
+					<li>All Bronze membership benefits</li>
+					<li>Priority event registration</li>
+					<li>Social media promotion</li>
+					<li>Quarterly business spotlight</li>
+					<li>Leadership development workshops</li>
+					<li>Enhanced directory features</li>
+					<li>Business referral network access</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="modal-gold" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Gold Membership</h2>
+				<p><strong>Cost:</strong> $500/year</p>
+				<p>Premium membership for established businesses that want maximum visibility and influence in the chamber.</p>
+				<h3>Benefits Include:</h3>
+				<ul>
+					<li>All Silver membership benefits</li>
+					<li>Featured homepage spotlight</li>
+					<li>Board of directors voting rights</li>
+					<li>Annual business profile feature</li>
+					<li>Exclusive executive networking events</li>
+					<li>Complimentary event sponsorship opportunities</li>
+					<li>Priority support and advocacy</li>
+				</ul>
+			</div>
+		</div>
 	</main>
 
 	<footer>

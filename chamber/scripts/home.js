@@ -67,6 +67,8 @@ async function fetchWeather() {
             src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png"
             alt="${weatherDescription}"
             class="weather-icon"
+            width="80"
+            height="80"
           >
         </div>
         <div class="weather-info">
@@ -129,6 +131,8 @@ async function fetchWeather() {
             src="https://openweathermap.org/img/wn/${icon}.png"
             alt="${description}"
             class="forecast-icon"
+            width="50"
+            height="50"
           >
           <p class="forecast-description">${description}</p>
           <p class="forecast-temp"><strong>${maxTemp}°F</strong> / <span class="min-temp">${minTemp}°F</span></p>

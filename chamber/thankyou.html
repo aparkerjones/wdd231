@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Thank you for your interest in joining the Meridian Chamber of Commerce.">
+	<meta name="author" content="Parker Jones">
+	<title>Thank You | Meridian Chamber of Commerce</title>
+	<link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/small.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<script src="scripts/navigation.js" defer></script>
+	<script src="scripts/date.js" defer></script>
+	<script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="wrapper header-bar">
+			<div class="brand">
+				<img src="images/chamber-logo.svg" alt="Meridian Chamber of Commerce logo" width="48" height="48">
+				<div class="brand-text">
+					<span class="brand-name">Meridian Chamber</span>
+					<span class="brand-sub">of Commerce</span>
+				</div>
+			</div>
+			<button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">&#9776;</button>
+			<nav aria-label="Primary navigation">
+				<ul id="primaryNav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="discover.html">Discover</a></li>
+					<li><a href="join.html">Join</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="wrapper">
+		<section class="thankyou-content">
+			<h1>Thank You for Your Interest!</h1>
+			<p>We appreciate your interest in joining the Meridian Chamber of Commerce. A representative will contact you within 2-3 business days to discuss your membership application.</p>
+
+			<div class="application-summary">
+				<h2>Application Summary</h2>
+				<div id="summary-content">
+					<!-- Form data will be displayed here -->
+				</div>
+			</div>
+
+			<div class="next-steps">
+				<h2>What Happens Next?</h2>
+				<ol>
+					<li>Our membership coordinator will review your application</li>
+					<li>You'll receive a welcome packet with membership details</li>
+					<li>We'll schedule an orientation session for new members</li>
+					<li>Your business will be added to our member directory</li>
+				</ol>
+			</div>
+
+			<div class="thankyou-actions">
+				<a href="index.html" class="cta-button">Return to Home</a>
+				<a href="directory.html" class="secondary-button">View Member Directory</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrapper footer-content">
+			<div class="footer-chamber">
+				<img src="images/chamber-logo.svg" alt="Meridian Chamber of Commerce" width="40" height="40">
+				<p class="footer-chamber-name">Meridian Chamber of Commerce</p>
+				<address>
+					<p>215 E Franklin Rd, Meridian, ID 83642</p>
+					<p><a href="tel:+12088882817">(208) 888-2817</a></p>
+					<p><a href="mailto:info@meridianchamber.org">info@meridianchamber.org</a></p>
+				</address>
+			</div>
+
+			<div class="footer-meta">
+				<p>&copy; <span id="currentyear"></span> Meridian Chamber of Commerce</p>
+				<p>Parker Jones &mdash; WDD 231</p>
+				<p id="lastModified"></p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
