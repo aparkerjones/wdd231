@@ -1,0 +1,11 @@
+{
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": "Join the Meridian Chamber of Commerce",
+	"description": "Apply for membership with the Meridian Chamber of Commerce",
+	"url": "https://aparkerjones.github.io/wdd231/chamber/join.html",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Meridian Chamber of Commerce"
+	}
+}

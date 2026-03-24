@@ -210,10 +210,28 @@ async function fetchSpotlights() {
 }
 
 /**
+ * Load JSON-LD structured data from external file
+ */
+function loadStructuredData() {
+  fetch('scripts/index-schema.json')
+    .then(response => response.json())
+    .then(data => {
+      const schemaScript = document.getElementById('schema-script');
+      if (schemaScript) {
+        schemaScript.textContent = JSON.stringify(data, null, 2);
+      }
+    })
+    .catch(error => {
+      console.warn('Failed to load structured data:', error);
+    });
+}
+
+/**
  * Initialize home page by fetching weather and spotlights
  */
 function init() {
   console.log('Initializing home page features...');
+  loadStructuredData();
   fetchWeather();
   fetchSpotlights();
 }

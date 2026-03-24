@@ -1,0 +1,21 @@
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Meridian Chamber of Commerce",
+	"description": "Building prosperity through business connection and community partnership",
+	"url": "https://aparkerjones.github.io/wdd231/chamber/index.html",
+	"logo": "https://aparkerjones.github.io/wdd231/chamber/images/chamber-logo.svg",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "215 E Franklin Rd",
+		"addressLocality": "Meridian",
+		"addressRegion": "ID",
+		"postalCode": "83642"
+	},
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+1-208-888-2817",
+		"contactType": "customer service",
+		"email": "info@meridianchamber.org"
+	}
+}

@@ -861,7 +861,7 @@ footer a:focus-visible {
 	right: 1.5rem;
 	font-size: 2rem;
 	font-weight: bold;
-	color: #1a2535;
+	color: var(--color-white);
 	cursor: pointer;
 	transition: color 0.3s ease;
 	z-index: 1002;
@@ -869,24 +869,24 @@ footer a:focus-visible {
 
 .close:hover,
 .close:focus {
-	color: var(--color-error);
+	color: var(--color-accent);
 }
 
 .modal h2 {
 	margin: 0 0 1rem;
-	color: var(--color-primary);
+	color: var(--color-white);
 	font-size: 1.4rem;
 }
 
 .modal p {
 	margin: 0.5rem 0;
 	line-height: 1.5;
-	color: #1a2535;
+	color: var(--color-white);
 }
 
 .modal h3 {
 	margin: 1.5rem 0 0.5rem;
-	color: var(--color-primary);
+	color: var(--color-white);
 	font-size: 1.1rem;
 }
 
@@ -898,6 +898,7 @@ footer a:focus-visible {
 .modal li {
 	margin-bottom: 0.5rem;
 	line-height: 1.4;
+	color: var(--color-white);
 }
 
 /* Thank You Page Styles */

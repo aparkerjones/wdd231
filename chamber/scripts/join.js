@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         timestampField.value = new Date().toISOString();
     }
 
+    // Load JSON-LD structured data
+    loadStructuredData();
+
     // Set up modal dialogs
     initializeModals();
 
@@ -69,6 +72,23 @@ function initializeModals() {
             document.body.style.overflow = 'auto';
         }
     });
+}
+
+/**
+ * Load JSON-LD structured data from external file
+ */
+function loadStructuredData() {
+    fetch('scripts/join-schema.json')
+        .then(response => response.json())
+        .then(data => {
+            const schemaScript = document.getElementById('schema-script');
+            if (schemaScript) {
+                schemaScript.textContent = JSON.stringify(data, null, 2);
+            }
+        })
+        .catch(error => {
+            console.warn('Failed to load structured data:', error);
+        });
 }
 
 /**
