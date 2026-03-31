@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for Parks &amp; Trails, a National Parks Guide website built for WDD 231 by Parker Jones.">
+    <meta name="author" content="Parker Jones">
+    <title>Parks &amp; Trails – Site Plan | WDD 231</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>Parks &amp; Trails</h1>
+        <p>WDD 231 – Individual Project Site Plan &nbsp;|&nbsp; Parker Jones</p>
+    </header>
+
+    <main>
+
+        <!-- =================== SITE NAME =================== -->
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <h3>Parks &amp; Trails</h3>
+            <p>
+                I chose this name because it says exactly what the site is about — the
+                <strong>parks</strong> themselves and the <strong>trails</strong> that take
+                you through them. It's short, easy to remember, and the ampersand ties the
+                two ideas together in a way that feels natural rather than forced.
+            </p>
+            <p>
+                I have not picked a domain-style name beyond the site title because that is
+                not required for this class project.
+            </p>
+        </section>
+
+        <!-- =================== SITE PURPOSE =================== -->
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>
+                Parks &amp; Trails is a guide to U.S. national parks built on live data from
+                the NPS API. The idea is to give people a useful starting point for finding
+                parks, exploring activities, and planning trips — all in one place.
+                Specifically, it will:
+            </p>
+            <ul>
+                <li>
+                    <strong>Browse parks:</strong> Search or filter 15+ national parks by
+                    name or state, each showing a photo, description, and key details.
+                </li>
+                <li>
+                    <strong>Show activities:</strong> A separate page breaks down what you
+                    can actually do at each park — hiking, ranger programs, camping, and more.
+                </li>
+                <li>
+                    <strong>Save a list:</strong> Visitors can favorite parks and build a
+                    trip itinerary that stays saved in the browser via local storage.
+                </li>
+                <li>
+                    <strong>Park details modal:</strong> Clicking a park card opens a modal
+                    with more info so you never lose your place on the page.
+                </li>
+            </ul>
+        </section>
+
+        <!-- =================== SCENARIOS =================== -->
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <p>
+                These are the kinds of questions a real visitor might ask when they land on
+                the site:
+            </p>
+            <ul>
+                <li>
+                    "I'm planning a road trip through the Southwest. Which national parks are
+                    located in Utah and Arizona, and what beginner-friendly hiking trails do
+                    they offer?"
+                </li>
+                <li>
+                    "I visited Yellowstone last summer and want to remember it. Can I save
+                    it to a favorites list or build a custom itinerary for parks I still want
+                    to see?"
+                </li>
+                <li>
+                    "I have kids aged 6 and 9. Which parks offer ranger-led programs or
+                    other family activities that would be suitable for young children?"
+                </li>
+            </ul>
+        </section>
+
+        <!-- =================== COLOR SCHEMA =================== -->
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>
+                The colors are pulled from the look of national parks — forest greens, warm
+                sandstone, golden sunlight. All four are actively used on this page.
+            </p>
+
+            <div class="color-palette">
+
+                <div class="color-swatch">
+                    <div class="swatch-box swatch-deep-green" aria-label="Deep Forest Green swatch"></div>
+                    <span class="swatch-label">Deep Forest Green</span>
+                    <span class="swatch-hex">#1b4332</span>
+                    <span class="swatch-usage">Header, nav &amp; footer backgrounds; main section headings</span>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="swatch-box swatch-warm-cream" aria-label="Warm Cream swatch"></div>
+                    <span class="swatch-label">Warm Cream</span>
+                    <span class="swatch-hex">#fef9ef</span>
+                    <span class="swatch-usage">Page &amp; card backgrounds; light text on dark surfaces</span>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="swatch-box swatch-golden-amber" aria-label="Golden Amber swatch"></div>
+                    <span class="swatch-label">Golden Amber</span>
+                    <span class="swatch-hex">#e9a800</span>
+                    <span class="swatch-usage">Section accent borders, CTA buttons, decorative highlights</span>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="swatch-box swatch-dark-charcoal" aria-label="Dark Charcoal swatch"></div>
+                    <span class="swatch-label">Dark Charcoal</span>
+                    <span class="swatch-hex">#333333</span>
+                    <span class="swatch-usage">Body text, paragraph content, labels, captions</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =================== TYPOGRAPHY =================== -->
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>
+                The site uses two Google Fonts that complement each other well. Both are
+                loaded and active on this page.
+            </p>
+
+            <!-- Merriweather sample -->
+            <div class="font-sample">
+                <p class="font-sample-meta">Merriweather (serif) — Headings &amp; Hero Text</p>
+                <p class="font-sample-heading">Explore America's National Parks</p>
+                <p class="font-sample-heading-sub">Discover trails, wildlife, and wonder</p>
+                <p class="font-sample-body">
+                    Merriweather is used for all headings and hero text. The serif style gives
+                    the site a classic, outdoorsy feel while still being easy to read at larger sizes.
+                </p>
+            </div>
+
+            <!-- Open Sans sample -->
+            <div class="font-sample">
+                <p class="font-sample-meta">Open Sans (sans-serif) — Body Text &amp; Navigation</p>
+                <p class="font-sample-nav">Home &nbsp;|&nbsp; Parks Directory &nbsp;|&nbsp; Activities &nbsp;|&nbsp; My Itinerary</p>
+                <p class="font-sample-body">
+                    Open Sans handles everything else — body text, nav links, card copy, and
+                    form labels. It's clean and easy to read at small sizes, which matters on mobile.
+                </p>
+            </div>
+        </section>
+
+        <!-- =================== WIREFRAME =================== -->
+        <section id="wireframe">
+            <h2>6. Wireframe – Home Page</h2>
+            <p>
+                These sketches show how the home page will be laid out at mobile and desktop
+                sizes. Each block represents a content area — the labels describe what goes there.
+            </p>
+
+            <div class="wireframe-container">
+
+                <!-- MOBILE wireframe -->
+                <div class="wireframe wireframe-mobile">
+                    <h3>Mobile (&lt; 600 px)</h3>
+
+                    <!-- Nav -->
+                    <div class="wf-block dark">Header / Logo + ☰ Hamburger</div>
+
+                    <!-- Dropdown nav (visible when open) -->
+                    <div class="wf-block wf-nav-tint">
+                        Nav Links (stacked, hidden by default)
+                    </div>
+
+                    <!-- Hero -->
+                    <div class="wf-block tall wf-hero-tint">
+                        Hero Image<br>Park Name &amp; Tagline
+                    </div>
+
+                    <!-- Search -->
+                    <div class="wf-block accent">Search / Filter Bar</div>
+
+                    <!-- Park cards – stacked single column -->
+                    <div class="wf-block medium">Park Card 1<br><small>Name · State · Description · Image</small></div>
+                    <div class="wf-block medium">Park Card 2<br><small>Name · State · Description · Image</small></div>
+                    <div class="wf-block medium">Park Card 3<br><small>Name · State · Description · Image</small></div>
+                    <div class="wf-block wf-more">
+                        … more park cards (15+ total)
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="wf-block dark wf-footer-col">
+                        Footer<br><small>Nav · Attributions · Video</small>
+                    </div>
+                </div>
+
+                <!-- DESKTOP wireframe -->
+                <div class="wireframe wireframe-desktop">
+                    <h3>Desktop / Tablet (&ge; 768 px)</h3>
+
+                    <!-- Top nav bar – horizontal -->
+                    <div class="wf-block dark wf-nav-bar">
+                        <span class="wf-nav-brand">Parks &amp; Trails</span>
+                        <span>Home &nbsp;&nbsp; Parks Directory &nbsp;&nbsp; Activities &nbsp;&nbsp; My Itinerary</span>
+                    </div>
+
+                    <!-- Hero banner -->
+                    <div class="wf-block taller wf-hero-tint wf-hero-lg">
+                        Full-Width Hero Image<br>
+                        <span class="wf-hero-sub">Park Name · Tagline · "Explore Now" CTA Button</span>
+                    </div>
+
+                    <!-- Search bar -->
+                    <div class="wf-block accent wf-search-bar">
+                        [Search by park name or state …] &nbsp; [Filter by activity ▾] &nbsp; [Search]
+                    </div>
+
+                    <!-- 3-column park card grid -->
+                    <div class="wf-grid-3">
+                        <div class="wf-block medium">Park Card 1<br><small>Image · Name · State · Description</small></div>
+                        <div class="wf-block medium">Park Card 2<br><small>Image · Name · State · Description</small></div>
+                        <div class="wf-block medium">Park Card 3<br><small>Image · Name · State · Description</small></div>
+                    </div>
+                    <div class="wf-grid-3">
+                        <div class="wf-block medium">Park Card 4<br><small>Image · Name · State · Description</small></div>
+                        <div class="wf-block medium">Park Card 5<br><small>Image · Name · State · Description</small></div>
+                        <div class="wf-block medium">Park Card 6<br><small>Image · Name · State · Description</small></div>
+                    </div>
+                    <div class="wf-block wf-more">
+                        … additional rows of park cards (15+ total)
+                    </div>
+
+                    <!-- 3-column footer -->
+                    <div class="wf-footer-grid">
+                        <div class="wf-block dark wf-footer-col">
+                            Navigation Links
+                        </div>
+                        <div class="wf-block dark wf-footer-col">
+                            Copyright &amp; Author
+                        </div>
+                        <div class="wf-block dark wf-footer-col">
+                            Attributions · Video Link
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Parker Jones &nbsp;|&nbsp; WDD 231 </p>
+    </footer>
+
+</body>
+</html>
