@@ -179,26 +179,6 @@ h3 {
 	margin-bottom: 1rem;
 }
 
-/* Content panel */
-.content-panel {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	border-radius: 0.75rem;
-	padding: 1.25rem;
-}
-
-.content-panel h2 {
-	margin: 0 0 0.75rem;
-}
-
-.content-panel p {
-	margin: 0;
-}
-
-.content-panel p + p {
-	margin-top: 0.75rem;
-}
-
 /* View toggle */
 .view-toggle {
 	display: flex;
@@ -1000,4 +980,108 @@ footer a:focus-visible {
 .secondary-button:focus-visible {
 	background: var(--color-secondary);
 	color: var(--color-white);
+}
+
+/* Discover Page */
+
+/* Visit message */
+.visit-message {
+	background: var(--color-accent-bg);
+	border: 1px solid var(--color-gold-border);
+	border-radius: 0.5rem;
+	padding: 0.75rem 1.25rem;
+	color: var(--color-gold-text);
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	min-height: 1.5rem;
+}
+
+/* Discover grid — small: single column, named areas */
+.discover-grid {
+	display: grid;
+	grid-template-areas:
+		"card1"
+		"card2"
+		"card3"
+		"card4"
+		"card5"
+		"card6"
+		"card7"
+		"card8";
+	gap: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.discover-card:nth-child(1) { grid-area: card1; }
+.discover-card:nth-child(2) { grid-area: card2; }
+.discover-card:nth-child(3) { grid-area: card3; }
+.discover-card:nth-child(4) { grid-area: card4; }
+.discover-card:nth-child(5) { grid-area: card5; }
+.discover-card:nth-child(6) { grid-area: card6; }
+.discover-card:nth-child(7) { grid-area: card7; }
+.discover-card:nth-child(8) { grid-area: card8; }
+
+/* Discover card */
+.discover-card {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: 0.75rem;
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.discover-card h2 {
+	font-size: 1.1rem;
+	margin: 0;
+}
+
+.discover-card figure {
+	margin: 0;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.discover-card figure img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+}
+
+.discover-card address {
+	font-style: normal;
+	font-size: 0.85rem;
+	color: var(--color-muted);
+}
+
+.discover-card p {
+	font-size: 0.875rem;
+	color: var(--color-muted);
+	margin: 0;
+	flex: 1;
+	line-height: 1.5;
+}
+
+.learn-more-btn {
+	align-self: flex-start;
+	padding: 0.5rem 1.25rem;
+	background: var(--color-primary);
+	color: var(--color-white);
+	border: none;
+	border-radius: 0.4rem;
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: background 0.2s;
+	margin-top: auto;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+	background: var(--color-secondary);
 }

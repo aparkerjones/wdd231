@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="styles/larger.css">
 	<script src="scripts/navigation.js" defer></script>
 	<script src="scripts/date.js" defer></script>
+	<script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
 	<header>
@@ -44,9 +45,11 @@
 			<p>Explore local highlights, community insights, and what makes Meridian a strong place to live and work.</p>
 		</section>
 
-		<section class="content-panel">
-			<p>This page introduces area context, notable places, and community information for chamber visitors.</p>
-		</section>
+		<div id="visitMessage" class="visit-message" aria-live="polite"></div>
+
+		<div id="discoverGrid" class="discover-grid">
+			<!-- Cards are injected here by discover.js -->
+		</div>
 	</main>
 
 	<footer>

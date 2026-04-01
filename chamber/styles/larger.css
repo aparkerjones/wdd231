@@ -94,9 +94,7 @@
 		justify-self: end;
 		align-self: center;
 	}
-}
 
-@media (min-width: 48rem) {
 	/* Join Page - Two column layout */
 	.join-content {
 		display: grid;
@@ -118,16 +116,7 @@
 		grid-template-columns: 1fr;
 		gap: 1rem;
 	}
-}
 
-@media (min-width: 64rem) {
-	/* Join Page - Adjust modal width */
-	.modal-content {
-		max-width: 600px;
-	}
-}
-
-@media (min-width: 48rem) {
 	/* Thank You Page */
 	.thankyou-actions {
 		flex-direction: row;
@@ -146,6 +135,10 @@
 }
 
 @media (min-width: 64rem) {
+	/* Join Page - Adjust modal width */
+	.modal-content {
+		max-width: 600px;
+	}
 
 	/* Hero */
 	.hero {
@@ -165,5 +158,45 @@
 	/* Three-column grid */
 	#memberCards.grid-view {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* =====================
+   Discover Page — Medium (641px – 1024px)
+   2-column grid; card3 and card6 span both columns
+   ===================== */
+@media (min-width: 40.0625rem) {
+	.discover-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"card1 card2"
+			"card3 card3"
+			"card4 card5"
+			"card6 card6"
+			"card7 card8";
+	}
+
+	/* Hover effect — medium screens and above only */
+	.discover-card figure img {
+		transition: transform 0.3s ease, filter 0.3s ease;
+	}
+
+	.discover-card figure img:hover {
+		transform: scale(1.05);
+		filter: brightness(1.1) saturate(1.2);
+	}
+}
+
+/* =====================
+   Discover Page — Large (1025px+)
+   3-column grid; card4 spans first two columns
+   ===================== */
+@media (min-width: 64.0625rem) {
+	.discover-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			"card1 card2 card3"
+			"card4 card4 card5"
+			"card6 card7 card8";
 	}
 }
