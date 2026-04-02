@@ -22,6 +22,11 @@
 	--color-white-35:  #ffffff59;
 	--color-white-10:  #ffffff1a;
 	--color-black-25:  #00000040;
+	--color-black-30:  #0000004d;
+	--color-black-50:  #00000080;
+	--color-black-70:  #000000b3;
+	--color-transparent: #00000000;
+	--color-secondary-12: #2e6da420;
 	--color-success-bg: #e8f5e9;   /* green background */
 	--color-success-text: #2b6b2f; /* green text */
 	--color-success-border: #a5d6a7; /* green border */
@@ -106,7 +111,7 @@ header {
 /* Menu button */
 #menuButton {
 	border: 1px solid var(--color-white-40);
-	background: transparent;
+	background: var(--color-transparent);
 	color: var(--color-white);
 	font-size: 1.25rem;
 	width: 44px;
@@ -349,6 +354,7 @@ h3 {
 .loading {
 	color: var(--color-muted);
 }
+
 .hero {
 	position: relative;
 	margin: 0 calc(50% - 50vw) 2rem;
@@ -370,7 +376,7 @@ h3 {
 .hero-content {
 	position: relative;
 	z-index: 1;
-	background: rgba(0, 0, 0, 0.5);
+	background: var(--color-black-50);
 	padding: 2rem 1.25rem;
 	text-align: center;
 	color: var(--color-white);
@@ -729,7 +735,7 @@ footer a:focus-visible {
 .membership-form textarea:focus {
 	outline: none;
 	border-color: var(--color-secondary);
-	box-shadow: 0 0 0 3px var(--color-secondary)20;
+	box-shadow: 0 0 0 3px var(--color-secondary-12);
 }
 
 .membership-form textarea {
@@ -812,18 +818,18 @@ footer a:focus-visible {
 .modal {
 	padding: 0;
 	border: none;
-	background: transparent;
+	background: var(--color-white-10);
 	width: min(90vw, 500px);
 	max-height: 80vh;
 	overflow: visible;
 }
 
 .modal::backdrop {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: var(--color-black-70);
 }
 
 .modal-content {
-	background-color: #ffffff;
+	background-color: var(--color-surface);
 	margin: 0;
 	padding: 2rem;
 	border-radius: 0.75rem;
@@ -832,8 +838,8 @@ footer a:focus-visible {
 	position: relative;
 	max-height: min(80vh, 600px);
 	overflow-y: auto;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-	border: 2px solid #ffffff;
+	box-shadow: 0 10px 30px var(--color-black-30);
+	border: 2px solid var(--color-surface);
 }
 
 .close {
