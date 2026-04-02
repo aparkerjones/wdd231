@@ -72,7 +72,7 @@ async function fetchWeather() {
           >
         </div>
         <div class="weather-info">
-          <p class="temperature">${currentTemperature}Â°F</p>
+          <p class="temperature">${currentTemperature}°F</p>
           <p class="description">${weatherDescription}</p>
         </div>
       </div>
@@ -135,7 +135,7 @@ async function fetchWeather() {
             height="50"
           >
           <p class="forecast-description">${description}</p>
-          <p class="forecast-temp"><strong>${maxTemp}Â°F</strong> / <span class="min-temp">${minTemp}Â°F</span></p>
+          <p class="forecast-temp"><strong>${maxTemp}°F</strong> / <span class="min-temp">${minTemp}°F</span></p>
         </article>
       `;
     });

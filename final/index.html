@@ -3,19 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Final project page for WDD 231 with shared navigation and footer layout.">
+	<meta name="description" content="Discover U.S. national parks, explore activities, and build your personalized park trip plan.">
 	<meta name="author" content="Parker Jones">
-	<meta property="og:title" content="WDD231 | Final">
-	<meta property="og:description" content="Parker Jones WDD 231 final project page.">
+	<meta property="og:title" content="National Parks & Trails | Home">
+	<meta property="og:description" content="Explore U.S. national park highlights and plan your next park adventure.">
 	<meta property="og:image" content="https://aparkerjones.github.io/wdd231/images/profile.jpg">
-	<meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/">
-	<title>WDD231 | Final</title>
+	<meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/index.html">
+	<title>National Parks & Trails | Home</title>
 	<link rel="icon" href="../images/lightning.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../styles/small.css">
-	<link rel="stylesheet" href="../styles/larger.css">
+	<link rel="stylesheet" href="styles/final.css">
 	<script src="../scripts/navigation.js" defer></script>
 	<script src="../scripts/date.js" defer></script>
 </head>
@@ -24,30 +23,59 @@
 		<div class="wrapper header-bar">
 			<div class="brand">
 				<img src="../images/site-logo.svg" alt="Site logo" width="48" height="48">
-				<span>Parker Jones</span>
+				<span>National Parks &amp; Trails</span>
 			</div>
 			<button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">☰</button>
 			<nav aria-label="Primary navigation">
 				<ul id="primaryNav">
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../chamber/">Chamber</a></li>
-					<li><a href="index.html" class="active">Final</a></li>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="explore.html">Explore</a></li>
+					<li><a href="plan.html">Plan</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
 	<main class="wrapper">
-		<h1>Final</h1>
-		<section>
-			<p>This section contains final project content and supporting materials for WDD 231.</p>
+		<h1>National Parks &amp; Trails</h1>
+
+		<section class="home-hero" aria-label="Site introduction">
+			<div class="content-card home-hero-copy">
+				<h2>Find Your Next Park Adventure</h2>
+				<p>National Parks &amp; Trails helps you discover U.S. parks, compare activities, and build a saved visit plan in one place.</p>
+				<p>Explore destinations, open park profiles, and keep your shortlist ready when it is time to travel.</p>
+				<div class="home-actions">
+					<a class="btn btn-primary" href="explore.html">Start Exploring</a>
+					<a class="btn btn-secondary" href="plan.html">Open My Plan</a>
+				</div>
+			</div>
+
+			<div class="content-card">
+				<h2>What You Can Do Here</h2>
+				<ul>
+					<li>Browse park highlights across states and landscapes</li>
+					<li>Filter parks by activity, location, and search terms</li>
+					<li>Save favorites to build your own trip plan</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="home-panels" aria-label="Planning overview">
+			<article class="content-card">
+				<h2>Explore Parks</h2>
+				<p>Find parks by region and interests, then open each park profile for a closer look at activities and trail-friendly details.</p>
+			</article>
+			<article class="content-card">
+				<h2>Plan Your Route</h2>
+				<p>Save the parks you want to visit and keep your trip preferences organized in one place while planning your next outdoor adventure.</p>
+			</article>
 		</section>
 	</main>
 
 	<footer>
 		<div class="wrapper footer-content">
 			<nav class="social-links" aria-label="My social links">
-				<a href="https://github.com/parko/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
+				<a href="https://github.com/aparkerjones/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
 					<img src="../images/icon-github.svg" alt="GitHub icon" width="24" height="24">
 				</a>
 				<a href="https://www.linkedin.com/in/a-parker-jones/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
@@ -60,6 +88,11 @@
 					<img src="../images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
 				</a>
 			</nav>
+
+			<p class="footer-links">
+				<a href="attributions.html">Attributions</a> |
+				<a href="video.html">Trip Video</a>
+			</p>
 
 			<p>&copy; <span id="currentyear"></span> Parker Jones | Idaho, United States</p>
 

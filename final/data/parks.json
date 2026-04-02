@@ -1,0 +1,169 @@
+{
+    "parks": [
+        {
+            "id": "acad",
+            "fullName": "Acadia National Park",
+            "states": "ME",
+            "designation": "National Park",
+            "description": "Acadia combines rocky Atlantic shoreline, mountain summits, and carriage roads for hiking, biking, and scenic drives.",
+            "imageUrl": "https://placehold.co/640x400/eaf0ec/1f3b2d?text=Acadia+National+Park",
+            "imageAlt": "Scenic placeholder image for Acadia National Park.",
+            "activities": ["Hiking", "Scenic Drives", "Wildlife Viewing", "Biking"],
+            "website": "https://www.nps.gov/acad/index.htm"
+        },
+        {
+            "id": "arch",
+            "fullName": "Arches National Park",
+            "states": "UT",
+            "designation": "National Park",
+            "description": "Arches protects a high desert landscape filled with sandstone arches, balanced rocks, and dramatic red formations.",
+            "imageUrl": "https://placehold.co/640x400/fef9ef/1f3b2d?text=Arches+National+Park",
+            "imageAlt": "Scenic placeholder image for Arches National Park.",
+            "activities": ["Hiking", "Photography", "Stargazing", "Camping"],
+            "website": "https://www.nps.gov/arch/index.htm"
+        },
+        {
+            "id": "badl",
+            "fullName": "Badlands National Park",
+            "states": "SD",
+            "designation": "National Park",
+            "description": "Badlands features layered buttes and canyons alongside mixed-grass prairie that supports bison and bighorn sheep.",
+            "imageUrl": "https://placehold.co/640x400/fff6df/1f3b2d?text=Badlands+National+Park",
+            "imageAlt": "Scenic placeholder image for Badlands National Park.",
+            "activities": ["Hiking", "Scenic Drives", "Wildlife Viewing", "Camping"],
+            "website": "https://www.nps.gov/badl/index.htm"
+        },
+        {
+            "id": "brca",
+            "fullName": "Bryce Canyon National Park",
+            "states": "UT",
+            "designation": "National Park",
+            "description": "Bryce Canyon is known for hoodoos, high-elevation viewpoints, and trails winding through colorful amphitheaters.",
+            "imageUrl": "https://placehold.co/640x400/eff7ee/1f3b2d?text=Bryce+Canyon+National+Park",
+            "imageAlt": "Scenic placeholder image for Bryce Canyon National Park.",
+            "activities": ["Hiking", "Stargazing", "Scenic Drives", "Ranger Programs"],
+            "website": "https://www.nps.gov/brca/index.htm"
+        },
+        {
+            "id": "cany",
+            "fullName": "Canyonlands National Park",
+            "states": "UT",
+            "designation": "National Park",
+            "description": "Canyonlands offers vast mesas, deep river canyons, and remote landscapes shaped by the Colorado and Green Rivers.",
+            "imageUrl": "https://placehold.co/640x400/f7f1e5/1f3b2d?text=Canyonlands+National+Park",
+            "imageAlt": "Scenic placeholder image for Canyonlands National Park.",
+            "activities": ["Hiking", "Backpacking", "Photography", "Camping"],
+            "website": "https://www.nps.gov/cany/index.htm"
+        },
+        {
+            "id": "cuva",
+            "fullName": "Cuyahoga Valley National Park",
+            "states": "OH",
+            "designation": "National Park",
+            "description": "Cuyahoga Valley preserves forests, rolling hills, and the Cuyahoga River with trails, waterfalls, and rail access.",
+            "imageUrl": "https://placehold.co/640x400/e8f0e7/1f3b2d?text=Cuyahoga+Valley+National+Park",
+            "imageAlt": "Scenic placeholder image for Cuyahoga Valley National Park.",
+            "activities": ["Hiking", "Biking", "Birdwatching", "Family Programs"],
+            "website": "https://www.nps.gov/cuva/index.htm"
+        },
+        {
+            "id": "ever",
+            "fullName": "Everglades National Park",
+            "states": "FL",
+            "designation": "National Park",
+            "description": "Everglades protects subtropical wetlands with mangroves, sawgrass marshes, and habitat for unique wildlife.",
+            "imageUrl": "https://placehold.co/640x400/f1f9f0/1f3b2d?text=Everglades+National+Park",
+            "imageAlt": "Scenic placeholder image for Everglades National Park.",
+            "activities": ["Wildlife Viewing", "Boating", "Canoeing", "Ranger Programs"],
+            "website": "https://www.nps.gov/ever/index.htm"
+        },
+        {
+            "id": "glac",
+            "fullName": "Glacier National Park",
+            "states": "MT",
+            "designation": "National Park",
+            "description": "Glacier includes alpine lakes, rugged peaks, and iconic drives through mountain scenery and historic landscapes.",
+            "imageUrl": "https://placehold.co/640x400/e7efe6/1f3b2d?text=Glacier+National+Park",
+            "imageAlt": "Scenic placeholder image for Glacier National Park.",
+            "activities": ["Hiking", "Scenic Drives", "Wildlife Viewing", "Camping"],
+            "website": "https://www.nps.gov/glac/index.htm"
+        },
+        {
+            "id": "grca",
+            "fullName": "Grand Canyon National Park",
+            "states": "AZ",
+            "designation": "National Park",
+            "description": "Grand Canyon reveals immense geologic layers, river corridors, and viewpoints that span one of the world's great landscapes.",
+            "imageUrl": "https://placehold.co/640x400/fff2d8/1f3b2d?text=Grand+Canyon+National+Park",
+            "imageAlt": "Scenic placeholder image for Grand Canyon National Park.",
+            "activities": ["Hiking", "Scenic Drives", "Ranger Programs", "Photography"],
+            "website": "https://www.nps.gov/grca/index.htm"
+        },
+        {
+            "id": "grte",
+            "fullName": "Grand Teton National Park",
+            "states": "WY",
+            "designation": "National Park",
+            "description": "Grand Teton features jagged mountains, glacial lakes, and valley ecosystems with access to iconic western vistas.",
+            "imageUrl": "https://placehold.co/640x400/ecf4eb/1f3b2d?text=Grand+Teton+National+Park",
+            "imageAlt": "Scenic placeholder image for Grand Teton National Park.",
+            "activities": ["Hiking", "Boating", "Wildlife Viewing", "Camping"],
+            "website": "https://www.nps.gov/grte/index.htm"
+        },
+        {
+            "id": "olym",
+            "fullName": "Olympic National Park",
+            "states": "WA",
+            "designation": "National Park",
+            "description": "Olympic contains temperate rain forests, mountain terrain, and Pacific coastline across diverse ecosystems.",
+            "imageUrl": "https://placehold.co/640x400/f3f8f2/1f3b2d?text=Olympic+National+Park",
+            "imageAlt": "Scenic placeholder image for Olympic National Park.",
+            "activities": ["Hiking", "Beachcombing", "Wildlife Viewing", "Camping"],
+            "website": "https://www.nps.gov/olym/index.htm"
+        },
+        {
+            "id": "romo",
+            "fullName": "Rocky Mountain National Park",
+            "states": "CO",
+            "designation": "National Park",
+            "description": "Rocky Mountain offers high-alpine trails, tundra ecosystems, and panoramic views along Trail Ridge Road.",
+            "imageUrl": "https://placehold.co/640x400/edf5ec/1f3b2d?text=Rocky+Mountain+National+Park",
+            "imageAlt": "Scenic placeholder image for Rocky Mountain National Park.",
+            "activities": ["Hiking", "Scenic Drives", "Wildlife Viewing", "Photography"],
+            "website": "https://www.nps.gov/romo/index.htm"
+        },
+        {
+            "id": "seki",
+            "fullName": "Sequoia and Kings Canyon National Parks",
+            "states": "CA",
+            "designation": "National Parks",
+            "description": "These neighboring parks protect giant sequoias, deep canyons, and high Sierra landscapes.",
+            "imageUrl": "https://placehold.co/640x400/f2f7ef/1f3b2d?text=Sequoia+and+Kings+Canyon",
+            "imageAlt": "Scenic placeholder image for Sequoia and Kings Canyon National Parks.",
+            "activities": ["Hiking", "Camping", "Caving", "Ranger Programs"],
+            "website": "https://www.nps.gov/seki/index.htm"
+        },
+        {
+            "id": "yell",
+            "fullName": "Yellowstone National Park",
+            "states": "WY, MT, ID",
+            "designation": "National Park",
+            "description": "Yellowstone is known for geysers, hot springs, wildlife, and geothermal basins spread across a vast plateau.",
+            "imageUrl": "https://placehold.co/640x400/fff4e0/1f3b2d?text=Yellowstone+National+Park",
+            "imageAlt": "Scenic placeholder image for Yellowstone National Park.",
+            "activities": ["Wildlife Viewing", "Scenic Drives", "Ranger Programs", "Hiking"],
+            "website": "https://www.nps.gov/yell/index.htm"
+        },
+        {
+            "id": "yose",
+            "fullName": "Yosemite National Park",
+            "states": "CA",
+            "designation": "National Park",
+            "description": "Yosemite features granite cliffs, waterfalls, giant sequoias, and valley meadows with year-round recreation.",
+            "imageUrl": "https://placehold.co/640x400/e9f2e7/1f3b2d?text=Yosemite+National+Park",
+            "imageAlt": "Scenic placeholder image for Yosemite National Park.",
+            "activities": ["Hiking", "Climbing", "Photography", "Camping"],
+            "website": "https://www.nps.gov/yose/index.htm"
+        }
+    ]
+}

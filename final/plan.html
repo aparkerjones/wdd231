@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Save favorite parks and organize trip details for your next national parks adventure.">
+    <meta name="author" content="Parker Jones">
+    <meta property="og:title" content="National Parks & Trails | Plan">
+    <meta property="og:description" content="Build a simple saved plan of parks you want to visit.">
+    <meta property="og:image" content="https://aparkerjones.github.io/wdd231/images/profile.jpg">
+    <meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/plan.html">
+    <title>National Parks & Trails | Plan</title>
+    <link rel="icon" href="../images/lightning.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/final.css">
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+    <script src="./scripts/plan.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-bar">
+            <div class="brand">
+                <img src="../images/site-logo.svg" alt="Site logo" width="48" height="48">
+                <span>National Parks &amp; Trails</span>
+            </div>
+            <button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">☰</button>
+            <nav aria-label="Primary navigation">
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="plan.html" class="active">Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <h1>Plan</h1>
+        <section>
+            <h2>Trip Planner</h2>
+            <p>Saved parks from Explore are stored in your browser and shown here.</p>
+            <p id="planSummary" class="results-summary" aria-live="polite">0 parks saved in your plan.</p>
+
+            <div class="plan-actions">
+                <a href="explore.html" class="btn btn-secondary">Back to Explore</a>
+                <button id="clearPlan" type="button" class="btn btn-primary">Clear Plan</button>
+            </div>
+
+            <div id="plannedParks" class="parks-grid"></div>
+        </section>
+
+        <section>
+            <h2>Trip Request Form</h2>
+            <p>Share your trip preferences and keep your planning details organized for upcoming park visits.</p>
+
+            <form class="form-grid" method="get" action="form-action.html">
+                <div>
+                    <label for="visitorName">Name</label>
+                    <input id="visitorName" name="visitorName" type="text" required>
+                </div>
+                <div>
+                    <label for="visitorEmail">Email</label>
+                    <input id="visitorEmail" name="visitorEmail" type="email" required>
+                </div>
+                <div>
+                    <label for="tripMonth">Preferred Month</label>
+                    <input id="tripMonth" name="tripMonth" type="month" required>
+                </div>
+                <div>
+                    <label for="groupSize">Group Size</label>
+                    <input id="groupSize" name="groupSize" type="number" min="1" max="30" required>
+                </div>
+                <div class="full-width">
+                    <label for="parkInterest">Top Park of Interest</label>
+                    <input id="parkInterest" name="parkInterest" type="text" required>
+                </div>
+                <div class="full-width">
+                    <label for="notes">Trip Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Anything special you want to include in your plan?"></textarea>
+                </div>
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn btn-primary">Submit Trip Request</button>
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper footer-content">
+            <nav class="social-links" aria-label="My social links">
+                <a href="https://github.com/aparkerjones/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
+                    <img src="../images/icon-github.svg" alt="GitHub icon" width="24" height="24">
+                </a>
+                <a href="https://www.linkedin.com/in/a-parker-jones/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                    <img src="../images/icon-linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/aparkerj/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile">
+                    <img src="../images/icon-instagram.svg" alt="Instagram icon" width="24" height="24">
+                </a>
+                <a href="https://www.facebook.com/parker.jones.376/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile">
+                    <img src="../images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
+                </a>
+            </nav>
+
+            <p class="footer-links">
+                <a href="attributions.html">Attributions</a> |
+                <a href="video.html">Trip Video</a>
+            </p>
+
+            <p>&copy; <span id="currentyear"></span> Parker Jones | Idaho, United States</p>
+
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
