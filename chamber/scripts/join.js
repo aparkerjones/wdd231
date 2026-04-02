@@ -24,50 +24,42 @@ function initializeModals() {
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
 
-    // Open modal on link click
+    // Open dialog on link click
     modalLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const modalId = this.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'block';
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            if (modal && typeof modal.showModal === 'function') {
+                modal.showModal();
             }
         });
     });
 
-    // Close modal on button click
+    // Close dialog on button click
     closeButtons.forEach(button => {
         button.addEventListener('click', function() {
             const modal = this.closest('.modal');
-            modal.style.display = 'none';
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = 'auto';
-        });
-    });
-
-    // Close modal on outside click
-    modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
+            if (modal && modal.open) {
+                modal.close();
             }
         });
     });
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                modal.style.display = 'none';
-                modal.setAttribute('aria-hidden', 'true');
-            });
-            document.body.style.overflow = 'auto';
-        }
+    // Close dialog when clicking the backdrop area
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            const rect = modal.getBoundingClientRect();
+            const clickedOutside =
+                e.clientX < rect.left ||
+                e.clientX > rect.right ||
+                e.clientY < rect.top ||
+                e.clientY > rect.bottom;
+
+            if (clickedOutside && modal.open) {
+                modal.close();
+            }
+        });
     });
 }
 
