@@ -28,7 +28,7 @@
 	/* Hero */
 	.hero {
 		min-height: 350px;
-		margin: 0 -2rem 2.5rem;
+		margin: 0 calc(50% - 50vw) 2.5rem;
 	}
 
 	.hero h1 {
@@ -143,7 +143,7 @@
 	/* Hero */
 	.hero {
 		min-height: 400px;
-		margin: 0 -2rem 3rem;
+		margin: 0 calc(50% - 50vw) 3rem;
 	}
 
 	.hero h1 {
