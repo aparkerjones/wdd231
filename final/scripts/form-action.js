@@ -20,7 +20,7 @@ const entries = Object.keys(fieldLabels)
     .filter((item) => item.value && item.value.trim().length > 0);
 
 if (entries.length === 0) {
-    submittedDataElement.innerHTML = "<p class=\"empty-state\">No trip details are available yet.</p>";
+    submittedDataElement.innerHTML = "<p class=\"empty-state\">No trip details were included in this request.</p>";
 } else {
     entries.forEach((item) => {
         const group = document.createElement("div");

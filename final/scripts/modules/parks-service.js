@@ -25,7 +25,7 @@ function normalizeNpsPark(park) {
         fullName: park.fullName || "Unnamed National Park",
         states: park.states || "N/A",
         designation: park.designation || "National Park",
-        description: park.description || "No description currently available.",
+        description: park.description || "Park details are not available for this listing.",
         imageUrl,
         imageAlt,
         activities: toActivityNames(park.activities),

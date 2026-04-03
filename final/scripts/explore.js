@@ -215,9 +215,9 @@ async function initExplorePage() {
         refreshResults();
         dataStatus.textContent = "";
     } catch {
-        dataStatus.textContent = "Parks could not be loaded at the moment.";
+        dataStatus.textContent = "Park data is unavailable right now.";
         resultsSummary.textContent = "Showing 0 parks.";
-        parksContainer.innerHTML = "<p class=\"empty-state\">We could not load parks right now. Please try again shortly.</p>";
+        parksContainer.innerHTML = "<p class=\"empty-state\">Park information is unavailable right now. Refresh the page to try again.</p>";
     }
 }
 
