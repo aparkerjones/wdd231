@@ -17,7 +17,7 @@ function toActivityNames(activities) {
 
 function normalizeNpsPark(park) {
     const firstImage = Array.isArray(park.images) && park.images.length > 0 ? park.images[0] : null;
-    const imageUrl = firstImage?.url || "https://placehold.co/640x400/eaf0ec/1f3b2d?text=National+Park";
+    const imageUrl = firstImage?.url || "images/parks/national-park-default.jpg";
     const imageAlt = firstImage?.altText || `Scenic view from ${park.fullName || "a national park"}.`;
 
     return {

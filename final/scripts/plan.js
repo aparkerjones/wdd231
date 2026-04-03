@@ -12,8 +12,8 @@ function buildPlannedParkMarkup(park) {
                 <p class="park-card-meta">${park.designation} | ${park.states}</p>
                 <h3>${park.fullName}</h3>
                 <div class="park-card-actions">
-                    <a class="btn btn-secondary" href="explore.html">View Explore</a>
-                    <button type="button" class="btn btn-primary" data-action="remove" data-park-id="${park.id}">Remove</button>
+                    <a class="site-action site-action-outline" href="explore.html">View Explore</a>
+                    <button type="button" class="site-action site-action-solid" data-action="remove" data-park-id="${park.id}">Remove</button>
                 </div>
             </div>
         </article>

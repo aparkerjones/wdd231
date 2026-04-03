@@ -7,23 +7,24 @@
     <meta name="author" content="Parker Jones">
     <meta property="og:title" content="National Parks & Trails | Plan">
     <meta property="og:description" content="Build a simple saved plan of parks you want to visit.">
-    <meta property="og:image" content="https://aparkerjones.github.io/wdd231/images/profile.jpg">
+    <meta property="og:image" content="https://aparkerjones.github.io/wdd231/final/images/profile.jpg">
     <meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/plan.html">
     <title>National Parks & Trails | Plan</title>
-    <link rel="icon" href="../images/lightning.ico" type="image/x-icon">
+    <link rel="icon" href="images/lightning.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/final.css">
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="../scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
     <script src="./scripts/plan.js" type="module" defer></script>
 </head>
 <body>
     <header>
         <div class="wrapper header-bar">
             <div class="brand">
-                <img src="../images/site-logo.svg" alt="Site logo" width="48" height="48">
+                <img src="images/site-logo.svg" alt="Site logo" width="48" height="48">
                 <span>National Parks &amp; Trails</span>
             </div>
             <button id="menuButton" aria-expanded="false" aria-controls="primaryNav" aria-label="Open site navigation">☰</button>
@@ -45,8 +46,8 @@
             <p id="planSummary" class="results-summary" aria-live="polite">0 parks saved in your plan.</p>
 
             <div class="plan-actions">
-                <a href="explore.html" class="btn btn-secondary">Back to Explore</a>
-                <button id="clearPlan" type="button" class="btn btn-primary">Clear Plan</button>
+                <a href="explore.html" class="site-action site-action-outline">Back to Explore</a>
+                <button id="clearPlan" type="button" class="site-action site-action-solid">Clear Plan</button>
             </div>
 
             <div id="plannedParks" class="parks-grid"></div>
@@ -82,8 +83,8 @@
                     <textarea id="notes" name="notes" rows="4" placeholder="Anything special you want to include in your plan?"></textarea>
                 </div>
                 <div class="form-actions full-width">
-                    <button type="submit" class="btn btn-primary">Submit Trip Request</button>
-                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="site-action site-action-solid">Submit Trip Request</button>
+                    <button type="reset" class="site-action site-action-outline">Reset Form</button>
                 </div>
             </form>
         </section>
@@ -93,22 +94,22 @@
         <div class="wrapper footer-content">
             <nav class="social-links" aria-label="My social links">
                 <a href="https://github.com/aparkerjones/wdd231" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub page">
-                    <img src="../images/icon-github.svg" alt="GitHub icon" width="24" height="24">
+                    <img src="images/icon-github.svg" alt="GitHub icon" width="24" height="24">
                 </a>
                 <a href="https://www.linkedin.com/in/a-parker-jones/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
-                    <img src="../images/icon-linkedin.svg" alt="LinkedIn icon" width="24" height="24">
+                    <img src="images/icon-linkedin.svg" alt="LinkedIn icon" width="24" height="24">
                 </a>
                 <a href="https://www.instagram.com/aparkerj/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile">
-                    <img src="../images/icon-instagram.svg" alt="Instagram icon" width="24" height="24">
+                    <img src="images/icon-instagram.svg" alt="Instagram icon" width="24" height="24">
                 </a>
                 <a href="https://www.facebook.com/parker.jones.376/" target="_blank" rel="noopener noreferrer" aria-label="Visit my Facebook profile">
-                    <img src="../images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
+                    <img src="images/icon-facebook.svg" alt="Facebook icon" width="24" height="24">
                 </a>
             </nav>
 
             <p class="footer-links">
                 <a href="attributions.html">Attributions</a> |
-                <a href="video.html">Trip Video</a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Trip Video</a>
             </p>
 
             <p>&copy; <span id="currentyear"></span> Parker Jones | Idaho, United States</p>

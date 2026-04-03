@@ -246,7 +246,7 @@ section,
     flex-wrap: wrap;
 }
 
-.btn {
+.site-action {
     border-radius: 0.45rem;
     padding: 0.5rem 0.8rem;
     font-weight: 600;
@@ -258,30 +258,30 @@ section,
     cursor: pointer;
 }
 
-.btn-primary {
+.site-action-solid {
     border: 1px solid var(--color-primary);
     background: var(--color-primary);
     color: #ffffff;
 }
 
-.btn-primary:hover,
-.btn-primary:focus-visible {
+.site-action-solid:hover,
+.site-action-solid:focus-visible {
     background: #16291f;
 }
 
-.btn-primary:disabled {
+.site-action-solid:disabled {
     opacity: 0.65;
     cursor: not-allowed;
 }
 
-.btn-secondary {
+.site-action-outline {
     border: 1px solid var(--color-secondary);
     background: #ffffff;
     color: var(--color-secondary);
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus-visible {
+.site-action-outline:hover,
+.site-action-outline:focus-visible {
     background: #eaf0ec;
 }
 

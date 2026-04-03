@@ -1,0 +1,72 @@
+/* Minimal normalize/reset for the WDD 231 final project */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+main,
+header,
+footer,
+nav,
+section,
+article,
+aside,
+figure,
+figcaption,
+dialog {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration-skip-ink: auto;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}

@@ -81,8 +81,8 @@ function makeCardMarkup(park) {
                 <p>${park.description}</p>
                 <p class="park-card-activities"><strong>Popular activities:</strong> ${parkActivities}</p>
                 <div class="park-card-actions">
-                    <button type="button" class="btn btn-secondary" data-action="details" data-park-id="${park.id}">Details</button>
-                    <button type="button" class="btn btn-primary" data-action="save" data-park-id="${park.id}" ${alreadySaved ? "disabled" : ""}>
+                    <button type="button" class="site-action site-action-outline" data-action="details" data-park-id="${park.id}">Details</button>
+                    <button type="button" class="site-action site-action-solid" data-action="save" data-park-id="${park.id}" ${alreadySaved ? "disabled" : ""}>
                         ${alreadySaved ? "Saved" : "Save to Plan"}
                     </button>
                 </div>
