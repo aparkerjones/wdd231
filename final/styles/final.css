@@ -6,6 +6,9 @@
     --color-secondary: #2f5d47;
     --color-accent: #f5d37a;
     --color-border: #d8d2c3;
+    --color-surface-hover: #eaf0ec;
+    --color-primary-dark: #16291f;
+    --color-overlay: #0f131173;
 }
 
 * {
@@ -261,12 +264,12 @@ section,
 .site-action-solid {
     border: 1px solid var(--color-primary);
     background: var(--color-primary);
-    color: #ffffff;
+    color: var(--color-surface);
 }
 
 .site-action-solid:hover,
 .site-action-solid:focus-visible {
-    background: #16291f;
+    background: var(--color-primary-dark);
 }
 
 .site-action-solid:disabled {
@@ -276,17 +279,17 @@ section,
 
 .site-action-outline {
     border: 1px solid var(--color-secondary);
-    background: #ffffff;
+    background: var(--color-surface);
     color: var(--color-secondary);
 }
 
 .site-action-outline:hover,
 .site-action-outline:focus-visible {
-    background: #eaf0ec;
+    background: var(--color-surface-hover);
 }
 
 .empty-state {
-    background: #ffffff;
+    background: var(--color-surface);
     border: 1px dashed var(--color-border);
     border-radius: 0.6rem;
     padding: 1rem;
@@ -302,7 +305,7 @@ section,
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;
     padding: 0.75rem;
-    background: #fff;
+    background: var(--color-surface);
 }
 
 .submitted-item dt {
@@ -323,7 +326,7 @@ dialog {
 }
 
 dialog::backdrop {
-    background: rgba(15, 19, 17, 0.45);
+    background: var(--color-overlay);
 }
 
 .modal-content {
@@ -356,7 +359,7 @@ footer {
     height: 42px;
     border: 1px solid var(--color-border);
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--color-surface);
 }
 
 .social-links img {

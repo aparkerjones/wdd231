@@ -12,6 +12,8 @@
     --medium-gray:        #666666;  /* secondary/muted text */
     --code-bg:            #e8f5e9;  /* inline code background */
     --border-light:       #dddddd;  /* light border for pale swatches */
+    --border-soft-dark:   #00000026;  /* subtle border around color swatches */
+    --white:              #ffffff;  /* pure white surface */
     --wf-tint-nav:        #d0ede0;  /* wireframe: nav links area */
     --wf-tint-hero:       #a8dabc;  /* wireframe: hero image area */
     --wf-tint-more:       #e0f2e9;  /* wireframe: "more cards" note */
@@ -125,7 +127,7 @@ code {
     width: 100%;
     height: 80px;
     border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-soft-dark);
     margin-bottom: 0.4rem;
 }
 
@@ -159,7 +161,7 @@ code {
 
 /* ---- Typography Section ---- */
 .font-sample {
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid var(--light-green);
     border-radius: 6px;
     padding: 1.25rem 1.5rem;
@@ -219,7 +221,7 @@ code {
 
 .wireframe {
     border: 2px solid var(--medium-green);
-    background-color: white;
+    background-color: var(--white);
     padding: 1rem;
     border-radius: 6px;
 }
