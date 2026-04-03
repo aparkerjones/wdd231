@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site plan for National Parks &amp; Trails, a National Parks Guide website built for WDD 231 by Parker Jones.">
     <meta name="author" content="Parker Jones">
+    <meta property="og:title" content="National Parks & Trails Site Plan for WDD 231">
+    <meta property="og:description" content="Read the National Parks & Trails site plan, including purpose, audience scenarios, colors, typography, and wireframes.">
+    <meta property="og:image" content="https://aparkerjones.github.io/wdd231/images/profile.jpg">
+    <meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/siteplan.html">
     <title>Site Plan | National Parks &amp; Trails | WDD 231</title>
+    <link rel="icon" href="../images/lightning.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="../scripts/date.js" defer></script>
 </head>
 <body>
     <header>
@@ -259,7 +265,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Parker Jones &nbsp;|&nbsp; WDD 231 </p>
+        <p>&copy; <span id="currentyear"></span> Parker Jones &nbsp;|&nbsp; WDD 231</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
