@@ -1,7 +1,19 @@
 const PARKS_DATA_URL = "./data/parks.json";
 const NPS_API_URL = "https://developer.nps.gov/api/v1/parks";
 const NPS_API_KEY = "NdpmlGMoN5Nqpe7KJW9gWthtMf4tn10MuePHTQbz";
-const NPS_LIMIT = 60;
+const NPS_PAGE_SIZE = 500;
+
+function isNationalParkDesignation(designation) {
+    if (typeof designation !== "string") {
+        return false;
+    }
+
+    const value = designation.trim().toLowerCase();
+    const hasAllowedType = /(national park|lakeshore|recreation area|river|preserve)/.test(value);
+    const hasExcludedType = /(monument|memorial|historic|historical|battlefield|parkway)/.test(value);
+
+    return hasAllowedType && !hasExcludedType;
+}
 
 function toActivityNames(activities) {
     if (!Array.isArray(activities)) {
@@ -34,17 +46,32 @@ function normalizeNpsPark(park) {
 }
 
 async function fetchFromNpsApi() {
-    const requestUrl = `${NPS_API_URL}?limit=${NPS_LIMIT}&api_key=${NPS_API_KEY}`;
-    const response = await fetch(requestUrl);
+    const allParks = [];
+    let start = 0;
 
-    if (!response.ok) {
-        throw new Error("NPS API request failed.");
+    while (true) {
+        const requestUrl = `${NPS_API_URL}?limit=${NPS_PAGE_SIZE}&start=${start}&api_key=${NPS_API_KEY}`;
+        const response = await fetch(requestUrl);
+
+        if (!response.ok) {
+            throw new Error("NPS API request failed.");
+        }
+
+        const payload = await response.json();
+        const parks = Array.isArray(payload.data) ? payload.data : [];
+
+        allParks.push(...parks);
+
+        if (parks.length < NPS_PAGE_SIZE) {
+            break;
+        }
+
+        start += parks.length;
     }
 
-    const payload = await response.json();
-    const parks = Array.isArray(payload.data) ? payload.data : [];
-
-    return parks.map((park) => normalizeNpsPark(park));
+    return allParks
+        .filter((park) => isNationalParkDesignation(park.designation))
+        .map((park) => normalizeNpsPark(park));
 }
 
 async function fetchFromLocalFile() {
@@ -54,7 +81,8 @@ async function fetchFromLocalFile() {
     }
 
     const payload = await response.json();
-    return Array.isArray(payload.parks) ? payload.parks : [];
+    const parks = Array.isArray(payload.parks) ? payload.parks : [];
+    return parks.filter((park) => isNationalParkDesignation(park.designation));
 }
 
 export async function fetchParks() {

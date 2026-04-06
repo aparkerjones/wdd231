@@ -164,6 +164,11 @@ section,
     gap: 1rem;
 }
 
+.home-hero .content-card ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.4rem;
+}
+
 .explore-controls {
     display: grid;
     gap: 0.6rem;
@@ -323,6 +328,10 @@ dialog {
     max-width: 560px;
     width: min(92vw, 560px);
     padding: 0;
+}
+
+dialog:not([open]) {
+    display: none;
 }
 
 dialog::backdrop {

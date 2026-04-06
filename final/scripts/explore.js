@@ -17,10 +17,19 @@ const detailMeta = document.getElementById("detailMeta");
 const detailDescription = document.getElementById("detailDescription");
 const detailActivities = document.getElementById("detailActivities");
 const detailWebsite = document.getElementById("detailWebsite");
+const IMAGE_PLACEHOLDER = "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=";
 
 let allParks = [];
+let parkImageObserver = null;
+
+// Ensure hidden state on initial load for browser consistency.
+detailsDialog.removeAttribute("open");
 
 function openDetailsDialog() {
+    if (detailsDialog.hasAttribute("open")) {
+        return;
+    }
+
     if (typeof detailsDialog.showModal === "function") {
         detailsDialog.showModal();
         return;
@@ -32,7 +41,6 @@ function openDetailsDialog() {
 function closeDetailsDialog() {
     if (typeof detailsDialog.close === "function") {
         detailsDialog.close();
-        return;
     }
 
     detailsDialog.removeAttribute("open");
@@ -74,7 +82,7 @@ function makeCardMarkup(park) {
 
     return `
         <article class="park-card" aria-label="${park.fullName}">
-            <img src="${park.imageUrl}" alt="${park.imageAlt}" width="640" height="400" loading="lazy">
+            <img class="park-card-image" src="${IMAGE_PLACEHOLDER}" data-src="${park.imageUrl}" alt="${park.imageAlt}" width="640" height="400" loading="lazy" decoding="async">
             <div class="park-card-content">
                 <p class="park-card-meta">${park.designation} | ${park.states}</p>
                 <h3>${park.fullName}</h3>
@@ -91,15 +99,65 @@ function makeCardMarkup(park) {
     `;
 }
 
+function loadParkImage(imageElement) {
+    const imageSource = imageElement.dataset.src;
+    if (!imageSource) {
+        return;
+    }
+
+    imageElement.src = imageSource;
+    imageElement.removeAttribute("data-src");
+}
+
+function initLazyImages() {
+    const images = parksContainer.querySelectorAll("img[data-src]");
+
+    if (parkImageObserver) {
+        parkImageObserver.disconnect();
+        parkImageObserver = null;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        images.forEach((image) => {
+            loadParkImage(image);
+        });
+        return;
+    }
+
+    parkImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            loadParkImage(entry.target);
+            observer.unobserve(entry.target);
+        });
+    }, {
+        root: null,
+        rootMargin: "120px 0px",
+        threshold: 0.01
+    });
+
+    images.forEach((image) => {
+        parkImageObserver.observe(image);
+    });
+}
+
 function renderResults(parks) {
     resultsSummary.textContent = `Showing ${parks.length} of ${allParks.length} parks.`;
 
     if (parks.length === 0) {
         parksContainer.innerHTML = "<p class=\"empty-state\">No parks matched your current filters. Try another state, activity, or search term.</p>";
+        if (parkImageObserver) {
+            parkImageObserver.disconnect();
+            parkImageObserver = null;
+        }
         return;
     }
 
     parksContainer.innerHTML = parks.map((park) => makeCardMarkup(park)).join("");
+    initLazyImages();
 }
 
 function setFilterOptions(parks) {
@@ -194,14 +252,8 @@ function attachEvents() {
     });
 
     detailsDialog.addEventListener("click", (event) => {
-        const dialogBounds = detailsDialog.getBoundingClientRect();
-        const clickedInsideDialog =
-            event.clientX >= dialogBounds.left &&
-            event.clientX <= dialogBounds.right &&
-            event.clientY >= dialogBounds.top &&
-            event.clientY <= dialogBounds.bottom;
-
-        if (!clickedInsideDialog) {
+        const clickedContent = event.target.closest(".modal-content");
+        if (!clickedContent) {
             closeDetailsDialog();
         }
     });
