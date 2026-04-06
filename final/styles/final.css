@@ -84,9 +84,10 @@ header {
 nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0.35rem 0 0.5rem;
     display: none;
     flex-direction: column;
+    gap: 0.35rem;
 }
 
 nav ul.open {
@@ -98,7 +99,9 @@ nav a {
     text-decoration: none;
     padding: 0.75rem 1rem;
     font-weight: 600;
-    border-top: 1px solid var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: 0.45rem;
+    background: var(--color-surface-hover);
 }
 
 nav a:hover,
@@ -110,6 +113,7 @@ nav a:focus-visible {
 nav a.active {
     background: var(--color-primary);
     color: #ffffff;
+    border-color: var(--color-primary);
 }
 
 main {
@@ -171,13 +175,17 @@ section,
 
 .explore-controls {
     display: grid;
-    gap: 0.6rem;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 0.75rem;
+    row-gap: 0.6rem;
     margin: 1rem 0;
+    align-items: center;
 }
 
 .explore-controls label {
     font-weight: 600;
     color: var(--color-primary);
+    margin: 0;
 }
 
 .form-grid label {
@@ -198,6 +206,12 @@ section,
     border-radius: 0.45rem;
     font: inherit;
     background: #ffffff;
+}
+
+.explore-controls button {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0.25rem;
 }
 
 .form-grid {
@@ -402,6 +416,7 @@ footer {
         flex-direction: row;
         gap: 0.4rem;
         align-items: center;
+        padding: 0;
     }
 
     nav a {
@@ -424,13 +439,8 @@ footer {
     }
 
     .explore-controls {
-        grid-template-columns: repeat(4, minmax(130px, 1fr));
-        align-items: end;
-        gap: 0.75rem;
-    }
-
-    .explore-controls button {
-        margin-top: 1.58rem;
+        grid-template-columns: max-content minmax(18rem, 28rem);
+        column-gap: 0.9rem;
     }
 
     .form-grid {
