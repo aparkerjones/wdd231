@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="logoTitle logoDesc">
-  <title id="logoTitle">Site Logo</title>
-  <desc id="logoDesc">Circular logo with initials PJ</desc>
+  <title id="logoTitle">Mountain Site Logo</title>
+  <desc id="logoDesc">Circular badge with layered mountain peaks and a trail line.</desc>
   <circle cx="60" cy="60" r="56" fill="#1f3b2d" />
   <circle cx="60" cy="60" r="48" fill="#2f5d47" />
-  <text x="60" y="72" text-anchor="middle" font-size="40" font-family="Poppins, Arial, sans-serif" fill="#f5d37a" font-weight="700">PJ</text>
+  <path d="M24 78 L46 46 L62 70 L76 55 L96 78 Z" fill="#f6f4ee" opacity="0.96" />
+  <path d="M37 78 L52 56 L64 72 L76 60 L89 78 Z" fill="#f5d37a" opacity="0.94" />
+  <path d="M32 86 C44 82, 58 80, 72 82 C80 83, 87 85, 92 88" stroke="#f6f4ee" stroke-width="4" fill="none" stroke-linecap="round" />
 </svg>
