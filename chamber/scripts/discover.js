@@ -6,6 +6,8 @@ const grid = document.getElementById('discoverGrid');
 attractions.forEach(item => {
 	const card = document.createElement('article');
 	card.classList.add('discover-card');
+	card.classList.add(item.id);
+	card.style.gridArea = item.id;
 
 	const h2 = document.createElement('h2');
 	h2.textContent = item.name;

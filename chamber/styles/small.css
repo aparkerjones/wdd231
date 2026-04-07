@@ -1007,6 +1007,7 @@ footer a:focus-visible {
 /* Discover grid — small: single column, named areas */
 .discover-grid {
 	display: grid;
+	grid-template-columns: 1fr;
 	grid-template-areas:
 		"card1"
 		"card2"
@@ -1020,14 +1021,14 @@ footer a:focus-visible {
 	margin-bottom: 2rem;
 }
 
-.discover-card:nth-child(1) { grid-area: card1; }
-.discover-card:nth-child(2) { grid-area: card2; }
-.discover-card:nth-child(3) { grid-area: card3; }
-.discover-card:nth-child(4) { grid-area: card4; }
-.discover-card:nth-child(5) { grid-area: card5; }
-.discover-card:nth-child(6) { grid-area: card6; }
-.discover-card:nth-child(7) { grid-area: card7; }
-.discover-card:nth-child(8) { grid-area: card8; }
+.discover-card.card1 { grid-area: card1; }
+.discover-card.card2 { grid-area: card2; }
+.discover-card.card3 { grid-area: card3; }
+.discover-card.card4 { grid-area: card4; }
+.discover-card.card5 { grid-area: card5; }
+.discover-card.card6 { grid-area: card6; }
+.discover-card.card7 { grid-area: card7; }
+.discover-card.card8 { grid-area: card8; }
 
 /* Discover card */
 .discover-card {
@@ -1035,14 +1036,21 @@ footer a:focus-visible {
 	border: 1px solid var(--color-border);
 	border-radius: 0.75rem;
 	padding: 1.25rem;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-areas:
+		"title"
+		"image"
+		"address"
+		"description"
+		"button";
+	grid-template-columns: 1fr;
 	gap: 0.75rem;
 }
 
 .discover-card h2 {
 	font-size: 1.1rem;
 	margin: 0;
+	grid-area: title;
 }
 
 .discover-card figure {
@@ -1050,6 +1058,7 @@ footer a:focus-visible {
 	border-radius: 0.5rem;
 	overflow: hidden;
 	line-height: 0;
+	grid-area: image;
 }
 
 .discover-card figure img {
@@ -1063,13 +1072,14 @@ footer a:focus-visible {
 	font-style: normal;
 	font-size: 0.85rem;
 	color: var(--color-muted);
+	grid-area: address;
 }
 
 .discover-card p {
 	font-size: 0.875rem;
 	color: var(--color-muted);
 	margin: 0;
-	flex: 1;
+	grid-area: description;
 	line-height: 1.5;
 }
 
@@ -1085,7 +1095,8 @@ footer a:focus-visible {
 	font-size: 0.875rem;
 	cursor: pointer;
 	transition: background 0.2s;
-	margin-top: auto;
+	grid-area: button;
+	justify-self: start;
 }
 
 .learn-more-btn:hover,
