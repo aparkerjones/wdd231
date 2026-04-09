@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="styles/final.css">
 	<script src="scripts/navigation.js" defer></script>
 	<script src="scripts/date.js" defer></script>
+	<script src="scripts/home.js" type="module" defer></script>
 </head>
 <body>
 	<header>
@@ -41,6 +42,12 @@
 
 	<main class="wrapper">
 		<h1>National Parks &amp; Trails</h1>
+
+		<section class="home-spotlight" aria-labelledby="spotlightHeading">
+			<h2 id="spotlightHeading">Featured Park</h2>
+			<p id="spotlightStatus" class="sr-only" aria-live="polite">Loading featured park.</p>
+			<div id="spotlightContainer" class="spotlight-grid"></div>
+		</section>
 
 		<section class="home-hero" aria-label="Site introduction">
 			<div class="content-card home-hero-copy">

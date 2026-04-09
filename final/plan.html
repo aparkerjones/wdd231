@@ -56,37 +56,30 @@
         </section>
 
         <section>
-            <h2>Trip Request Form</h2>
-            <p>Share your trip preferences and keep your planning details organized for upcoming park visits.</p>
+            <h2>Email Your Plan</h2>
+            <p>Set up a reminder email to yourself with your saved parks and notes for later.</p>
+            <p id="emailStatus" class="results-summary" aria-live="polite"></p>
 
-            <form class="form-grid" method="get" action="form-action.html">
+            <form id="emailPlanForm" class="form-grid">
                 <div>
-                    <label for="visitorName">Name</label>
-                    <input id="visitorName" name="visitorName" type="text" required>
+                    <label for="recipientEmail">Your Email</label>
+                    <input id="recipientEmail" name="recipientEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
                 </div>
                 <div>
-                    <label for="visitorEmail">Email</label>
-                    <input id="visitorEmail" name="visitorEmail" type="email" required>
+                    <label for="ccEmail">CC (Optional)</label>
+                    <input id="ccEmail" name="ccEmail" type="email" autocomplete="email" placeholder="friend@example.com">
                 </div>
                 <div>
-                    <label for="tripMonth">Preferred Month</label>
-                    <input id="tripMonth" name="tripMonth" type="month" required>
-                </div>
-                <div>
-                    <label for="groupSize">Group Size</label>
-                    <input id="groupSize" name="groupSize" type="number" min="1" max="30" required>
+                    <label for="emailSubject">Email Subject</label>
+                    <input id="emailSubject" name="emailSubject" type="text" value="My National Parks Plan Reminder" required>
                 </div>
                 <div class="full-width">
-                    <label for="parkInterest">Top Park of Interest</label>
-                    <input id="parkInterest" name="parkInterest" type="text" required>
-                </div>
-                <div class="full-width">
-                    <label for="notes">Trip Notes</label>
-                    <textarea id="notes" name="notes" rows="4" placeholder="Anything special you want to include in your plan?"></textarea>
+                    <label for="notes">Message To Future You</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="What should you remember before this trip?"></textarea>
                 </div>
                 <div class="form-actions full-width">
-                    <button type="submit" class="site-action site-action-solid">Submit Trip Request</button>
-                    <button type="reset" class="site-action site-action-outline">Reset Form</button>
+                    <button id="emailPlanButton" type="submit" class="site-action site-action-solid">Open Email Draft</button>
+                    <button type="reset" class="site-action site-action-outline">Reset</button>
                 </div>
             </form>
         </section>

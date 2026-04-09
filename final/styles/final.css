@@ -168,6 +168,25 @@ section,
     gap: 1rem;
 }
 
+.home-spotlight {
+    margin-top: 1rem;
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    max-width: 58rem;
+}
+
+.spotlight-card .park-card-image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 24rem;
+}
+
 .home-hero .content-card ul {
     margin: 0.5rem 0 0;
     padding-left: 1.4rem;
@@ -449,6 +468,10 @@ footer {
 
     .home-panels {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: 1fr;
     }
 
     .explore-controls {
