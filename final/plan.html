@@ -57,7 +57,7 @@
 
         <section>
             <h2>Email Your Plan</h2>
-            <p>Set up a reminder email to yourself with your saved parks and notes for later.</p>
+            <p>Generate a mock reminder email to yourself with your saved parks and notes for later.</p>
             <p id="emailStatus" class="results-summary" aria-live="polite"></p>
 
             <form id="emailPlanForm" class="form-grid">
@@ -78,10 +78,15 @@
                     <textarea id="notes" name="notes" rows="4" placeholder="What should you remember before this trip?"></textarea>
                 </div>
                 <div class="form-actions full-width">
-                    <button id="emailPlanButton" type="submit" class="site-action site-action-solid">Open Email Draft</button>
+                    <button id="emailPlanButton" type="submit" class="site-action site-action-solid">Generate Mock Email</button>
                     <button type="reset" class="site-action site-action-outline">Reset</button>
                 </div>
             </form>
+
+            <article class="content-card email-preview-card" aria-live="polite">
+                <h3>Mock Email Preview</h3>
+                <pre id="mockEmailPreview" class="email-preview">No mock email generated yet.</pre>
+            </article>
         </section>
     </main>
 

@@ -45,6 +45,7 @@ async function initSpotlight() {
             return;
         }
 
+        // Rotate the featured card each load so returning visitors see variety.
         const randomPark = pickRandomPark(parks);
         spotlightContainer.innerHTML = buildSpotlightCard(randomPark);
 

@@ -10,6 +10,7 @@ const recipientEmailInput = document.getElementById("recipientEmail");
 const ccEmailInput = document.getElementById("ccEmail");
 const emailSubjectInput = document.getElementById("emailSubject");
 const notesInput = document.getElementById("notes");
+const mockEmailPreview = document.getElementById("mockEmailPreview");
 
 function buildPlannedParkMarkup(park) {
     return `
@@ -32,6 +33,7 @@ function renderPlan() {
 
     planSummary.textContent = `${plannedParks.length} park${plannedParks.length === 1 ? "" : "s"} saved in your plan.`;
 
+    // Keep call-to-action buttons aligned with whether the plan has any parks.
     if (plannedParks.length === 0) {
         plannedParksContainer.innerHTML = "<p class=\"empty-state\">Your plan is empty. Go to Explore and save parks you want to visit.</p>";
         clearPlanButton.disabled = true;
@@ -39,7 +41,7 @@ function renderPlan() {
             emailPlanButton.disabled = true;
         }
         if (emailStatus) {
-            emailStatus.textContent = "Save at least one park to create an email draft.";
+            emailStatus.textContent = "Save at least one park to generate a mock email.";
         }
         return;
     }
@@ -49,7 +51,7 @@ function renderPlan() {
         emailPlanButton.disabled = false;
     }
     if (emailStatus) {
-        emailStatus.textContent = `${plannedParks.length} park${plannedParks.length === 1 ? "" : "s"} will be included in your email draft.`;
+        emailStatus.textContent = `${plannedParks.length} park${plannedParks.length === 1 ? "" : "s"} will be included in your mock email.`;
     }
     plannedParksContainer.innerHTML = plannedParks.map((park) => buildPlannedParkMarkup(park)).join("");
 }
@@ -91,27 +93,28 @@ function buildEmailBody(plannedParks) {
     ].join("\n");
 }
 
-function openEmailDraft(plannedParks) {
+function renderMockEmail(plannedParks) {
     const recipientEmail = recipientEmailInput?.value.trim();
     const ccEmail = ccEmailInput?.value.trim();
     const subject = emailSubjectInput?.value.trim() || "My National Parks Plan Reminder";
     const body = buildEmailBody(plannedParks);
 
-    if (!recipientEmail) {
-        return;
+    if (!mockEmailPreview) {
+        return false;
     }
 
-    const queryParts = [
-        `subject=${encodeURIComponent(subject)}`,
-        `body=${encodeURIComponent(body)}`
+    const previewLines = [
+        `To: ${recipientEmail || "Not provided"}`,
+        `CC: ${ccEmail || "None"}`,
+        `Subject: ${subject}`,
+        "",
+        body,
+        "",
+        "[Mock only] This preview was generated on-page and no email was sent."
     ];
 
-    if (ccEmail) {
-        queryParts.push(`cc=${encodeURIComponent(ccEmail)}`);
-    }
-
-    const mailtoUrl = `mailto:${encodeURIComponent(recipientEmail)}?${queryParts.join("&")}`;
-    window.location.href = mailtoUrl;
+    mockEmailPreview.textContent = previewLines.join("\n");
+    return true;
 }
 
 if (emailPlanForm) {
@@ -121,16 +124,17 @@ if (emailPlanForm) {
         const plannedParks = getPlan();
         if (plannedParks.length === 0) {
             if (emailStatus) {
-                emailStatus.textContent = "Save at least one park before creating an email draft.";
+                emailStatus.textContent = "Save at least one park before generating a mock email.";
             }
             return;
         }
 
+        const didRender = renderMockEmail(plannedParks);
         if (emailStatus) {
-            emailStatus.textContent = "Opening your email app with a prefilled draft.";
+            emailStatus.textContent = didRender
+                ? "Mock email generated below. No email was sent."
+                : "Unable to generate mock email preview.";
         }
-
-        openEmailDraft(plannedParks);
     });
 }
 

@@ -346,26 +346,18 @@ section,
     padding: 1rem;
 }
 
-.submitted-data {
-    display: grid;
-    gap: 0.75rem;
+.email-preview-card {
     margin-top: 1rem;
 }
 
-.submitted-item {
+.email-preview {
+    margin: 0;
+    padding: 0.9rem;
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;
-    padding: 0.75rem;
-    background: var(--color-surface);
-}
-
-.submitted-item dt {
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.submitted-item dd {
-    margin: 0.35rem 0 0;
+    background: var(--color-bg);
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 dialog {
