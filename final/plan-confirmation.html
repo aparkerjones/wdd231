@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Save favorite parks and organize trip details for your next national parks adventure.">
+    <meta name="description" content="Form action page showing submitted plan email values from URL Search Params.">
     <meta name="author" content="Parker Jones">
-    <meta property="og:title" content="Build Your National Parks Trip Plan">
-    <meta property="og:description" content="Build a simple saved plan of parks you want to visit.">
+    <meta property="og:title" content="National Parks & Trails | Plan Confirmation">
+    <meta property="og:description" content="Submitted plan email values displayed using URL Search Params.">
     <meta property="og:image" content="https://aparkerjones.github.io/wdd231/final/images/profile.jpg">
-    <meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/plan.html">
-    <title>National Parks & Trails | Plan</title>
+    <meta property="og:url" content="https://aparkerjones.github.io/wdd231/final/plan-confirmation.html">
+    <title>National Parks & Trails | Plan Confirmation</title>
     <link rel="icon" href="images/lightning.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/final.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="./scripts/plan.js" type="module"></script>
+    <script src="scripts/plan-confirmation.js" defer></script>
 </head>
 <body>
     <header>
@@ -41,46 +41,27 @@
     </header>
 
     <main class="wrapper">
-        <h1>Plan</h1>
-        <section>
-            <h2>Trip Planner</h2>
-            <p>Saved parks from Explore are stored in your browser and shown here.</p>
-            <p id="planSummary" class="results-summary" aria-live="polite">0 parks saved in your plan.</p>
+        <h1>Plan Form Action Page</h1>
+        <section class="content-card">
+            <h2>Submitted Values</h2>
+            <p>This page shows the values you submitted from the URL query string.</p>
+            <dl class="confirmation-list">
+                <dt>Your Email</dt>
+                <dd id="confirmRecipientEmail">Not provided</dd>
 
+                <dt>CC Email</dt>
+                <dd id="confirmCcEmail">None</dd>
+
+                <dt>Email Subject</dt>
+                <dd id="confirmSubject">Not provided</dd>
+
+                <dt>Message To Future You</dt>
+                <dd id="confirmNotes">None</dd>
+            </dl>
             <div class="plan-actions">
-                <a href="explore.html" class="site-action site-action-outline">Back to Explore</a>
-                <button id="clearPlan" type="button" class="site-action site-action-solid">Clear Plan</button>
+                <a class="site-action site-action-outline" href="plan.html">Back to Plan</a>
+                <a class="site-action site-action-solid" href="explore.html">Explore Parks</a>
             </div>
-
-            <div id="plannedParks" class="parks-grid"></div>
-        </section>
-
-        <section>
-            <h2>Email Your Plan</h2>
-            <p id="emailStatus" class="results-summary" aria-live="polite"></p>
-
-            <form id="emailPlanForm" class="form-grid" action="plan-confirmation.html" method="get">
-                <div>
-                    <label for="recipientEmail">Your Email</label>
-                    <input id="recipientEmail" name="recipientEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
-                </div>
-                <div>
-                    <label for="ccEmail">CC (Optional)</label>
-                    <input id="ccEmail" name="ccEmail" type="email" autocomplete="email" placeholder="friend@example.com">
-                </div>
-                <div>
-                    <label for="emailSubject">Email Subject</label>
-                    <input id="emailSubject" name="emailSubject" type="text" value="My National Parks Plan Reminder" required>
-                </div>
-                <div class="full-width">
-                    <label for="notes">Message To Future You</label>
-                    <textarea id="notes" name="notes" rows="4" placeholder="What should you remember before this trip?"></textarea>
-                </div>
-                <div class="form-actions full-width">
-                    <button id="emailPlanButton" type="submit" class="site-action site-action-solid">Submit and View Confirmation</button>
-                    <button type="reset" class="site-action site-action-outline">Reset</button>
-                </div>
-            </form>
         </section>
     </main>
 
