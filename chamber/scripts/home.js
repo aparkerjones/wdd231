@@ -9,7 +9,7 @@
 // Configuration - Location and API Settings
 const MERIDIAN_LAT = 43.5911;
 const MERIDIAN_LON = -116.3915;
-const API_KEY = 'ca21ca44e5ae3978cc9b2b29fe28d9ef';
+const API_KEY = '';
 
 // Membership Labels - Shared constant also used in members.js
 const MEMBERSHIP_LABELS = {
@@ -72,7 +72,7 @@ async function fetchWeather() {
           >
         </div>
         <div class="weather-info">
-          <p class="temperature">${currentTemperature}°F</p>
+          <p class="temperature">${currentTemperature}ï¿½F</p>
           <p class="description">${weatherDescription}</p>
         </div>
       </div>
@@ -135,7 +135,7 @@ async function fetchWeather() {
             height="50"
           >
           <p class="forecast-description">${description}</p>
-          <p class="forecast-temp"><strong>${maxTemp}°F</strong> / <span class="min-temp">${minTemp}°F</span></p>
+          <p class="forecast-temp"><strong>${maxTemp}ï¿½F</strong> / <span class="min-temp">${minTemp}ï¿½F</span></p>
         </article>
       `;
     });
