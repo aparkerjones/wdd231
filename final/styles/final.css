@@ -134,6 +134,15 @@ section,
     padding: 1rem;
 }
 
+.attributions-card ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.attributions-card li {
+    margin-bottom: 0.45rem;
+}
+
 .home-hero {
     display: grid;
     gap: 1rem;
