@@ -2,14 +2,9 @@
  * Home Page Script - Weather and Business Spotlights
  *
  * Features:
- * 1. Displays current weather and 3-day forecast from OpenWeatherMap API
+ * 1. Shows a demo-only weather unavailable notice
  * 2. Shows random featured business member spotlights
  */
-
-// Configuration - Location and API Settings
-const MERIDIAN_LAT = 43.5911;
-const MERIDIAN_LON = -116.3915;
-const API_KEY = '';
 
 // Membership Labels - Shared constant also used in members.js
 const MEMBERSHIP_LABELS = {
@@ -30,126 +25,18 @@ function getRandomElements(array, count) {
 }
 
 /**
- * Fetch current weather and 3-day forecast from OpenWeatherMap API
- * Displays weather information and handles errors gracefully
+ * Display a weather placeholder message for demo mode
  */
-async function fetchWeather() {
+function fetchWeather() {
   const weatherContainer = document.querySelector('.current-weather');
   const forecastContainer = document.getElementById('forecastContainer');
 
   if (weatherContainer) {
-    weatherContainer.innerHTML = '<p class="loading">Loading weather data...</p>';
+    weatherContainer.innerHTML = '<p class="error">Weather unavailable: API key removed for security (demo site).</p>';
   }
 
-  try {
-    console.log('Fetching weather for Meridian, ID...');
-
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${MERIDIAN_LAT}&lon=${MERIDIAN_LON}&appid=${API_KEY}&units=imperial`;
-    const weatherResponse = await fetch(currentWeatherUrl);
-    const weatherData = await weatherResponse.json();
-
-    if (!weatherResponse.ok) {
-      console.error('API Error:', weatherResponse.status, weatherResponse.statusText);
-      console.error('Message:', weatherData.message);
-      throw new Error('Unable to fetch current weather');
-    }
-
-    console.log('Weather data received:', weatherData);
-
-    const currentTemperature = Math.round(weatherData.main.temp);
-    const weatherDescription = weatherData.weather[0].main;
-    const weatherIcon = weatherData.weather[0].icon;
-
-    const currentWeatherHTML = `
-      <div class="current-weather-content">
-        <div class="weather-icon-container">
-          <img
-            src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png"
-            alt="${weatherDescription}"
-            class="weather-icon"
-            width="80"
-            height="80"
-          >
-        </div>
-        <div class="weather-info">
-          <p class="temperature">${currentTemperature}�F</p>
-          <p class="description">${weatherDescription}</p>
-        </div>
-      </div>
-    `;
-    weatherContainer.innerHTML = currentWeatherHTML;
-
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${MERIDIAN_LAT}&lon=${MERIDIAN_LON}&appid=${API_KEY}&units=imperial`;
-    const forecastResponse = await fetch(forecastUrl);
-    const forecastData = await forecastResponse.json();
-
-    if (!forecastResponse.ok) {
-      console.error('Forecast API Error:', forecastResponse.status);
-      throw new Error('Unable to fetch forecast data');
-    }
-
-    console.log('Forecast data received');
-
-    // Group forecast data by day for accurate daily highs/lows
-    const forecastDays = {};
-    forecastData.list.forEach(item => {
-      const date = new Date(item.dt * 1000).toLocaleDateString('en-US', {
-        weekday: 'short',
-        month: 'short',
-        day: 'numeric'
-      });
-
-      if (!forecastDays[date]) {
-        forecastDays[date] = {
-          temps: [],
-          descriptions: [],
-          icons: []
-        };
-      }
-      
-      // Collect all temps for the day
-      forecastDays[date].temps.push(item.main.temp_max, item.main.temp_min);
-      forecastDays[date].descriptions.push(item.weather[0].main);
-      forecastDays[date].icons.push(item.weather[0].icon);
-    });
-
-    // Get first 3 days
-    const forecast = Object.entries(forecastDays).slice(0, 3);
-    let forecastHTML = '';
-
-    forecast.forEach(([date, data]) => {
-      // Calculate daily high and low from all readings
-      const maxTemp = Math.round(Math.max(...data.temps));
-      const minTemp = Math.round(Math.min(...data.temps));
-      const description = data.descriptions[0];
-      const icon = data.icons[0];
-
-      forecastHTML += `
-        <article class="forecast-day">
-          <h4>${date}</h4>
-          <img
-            src="https://openweathermap.org/img/wn/${icon}.png"
-            alt="${description}"
-            class="forecast-icon"
-            width="50"
-            height="50"
-          >
-          <p class="forecast-description">${description}</p>
-          <p class="forecast-temp"><strong>${maxTemp}�F</strong> / <span class="min-temp">${minTemp}�F</span></p>
-        </article>
-      `;
-    });
-
-    forecastContainer.innerHTML = forecastHTML;
-    console.log('Weather updated successfully');
-
-  } catch (error) {
-    console.error('Weather fetch error:', error.message);
-
-    const errorHTML = `
-      <p class="error">Unable to load weather at this time. Please try again later.</p>
-    `;
-    weatherContainer.innerHTML = errorHTML;
+  if (forecastContainer) {
+    forecastContainer.innerHTML = '';
   }
 }
 
